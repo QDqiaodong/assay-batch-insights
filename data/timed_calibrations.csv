@@ -1,0 +1,4 @@
+analyte,calibration_id,valid_from,valid_to,slope,intercept,unit
+nitrate,N-OLD,2026-03-01T00:00:00Z,2026-03-01T12:00:00Z,2,1,mg/L
+nitrate,N-NEW,2026-03-01T12:00:00Z,,4,1,mg/L
+phosphate,P-1,2026-03-01T00:00:00Z,,4,0,mg/L
