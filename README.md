@@ -77,6 +77,30 @@ python -m assay_insights.warehouse --db /tmp/assay.sqlite --report \
 保持不变。完整口径、表结构、更正语义、并发事务与恢复说明见
 [docs/warehouse.md](docs/warehouse.md)。
 
+## 合成仪器串口采集
+
+`assay_insights.acquire` 是独立的标准库 CLI，从 POSIX 串口（8N1）按停等协议采集
+一整个合成仪器 run：每帧落盘并 fsync 后才 ACK，经现有 `load` 契约校验后同盘原子发布，
+不做任何分析。旧 `load`/`analyze`/`run`、原 CLI 与数据集市入口完全不变。
+
+```sh
+python -m assay_insights.acquire --device /dev/ttyUSB0 --baud 115200 \
+  --calibrations data/timed_calibrations.csv --policy data/policy.json \
+  --output run/acquire --timeout 10
+# 伪终端合成仪器端到端演示（自建 pty、拉起采集 CLI、打完整个 run）
+python -m assay_insights.acquire.tester --output run/acquire-demo
+```
+
+帧为 `@`+8 位十六进制长度+`:`+UTF-8 JSON+`*`+8 位 CRC32+LF（负载 ≤ 65536 字节）。
+`begin`（序号 0）声明安全 run_id、batch、正记录数与校准 SHA256；`measurement`
+携带 timed CSV 九列与连续序号；`end`（序号=记录数+1）核数量及逐测量原 payload 加
+LF 的 SHA256。上一帧逐字节重传只重 ACK，异内容/缺序拒绝，同序号 CRC 仅重试一次；
+拆粘帧、有界缓存、有限超时与 EOF 都有确定行为。每次成功 run 交付
+`<output>/<run_id>/` 下的 `results.csv`、原帧 `frames.log` 与确定性摘要
+`summary.json`；失败保留诊断与未发布暂存，重启从 `begin` 重播，成功 run 的重播
+仅在数据/校准/policy 全同时幂等，否则保旧目录并拒绝。完整协议、重试与发布语义见
+[docs/acquire.md](docs/acquire.md)。
+
 ## 结构与边界
 
 - `assay_insights/input.py`：校准、样本、策略契约；按完整表头识别新旧两套格式。
@@ -84,10 +108,13 @@ python -m assay_insights.warehouse --db /tmp/assay.sqlite --report \
 - `assay_insights/report.py`：来源哈希、schema 1/2 JSON 和 HTML。
 - `assay_insights/warehouse/`：SQLite 纵向数据集市（清单/报告校验、知识版本、
   更正视图、纵向变化查询与独立 CLI）。
+- `assay_insights/acquire/`：串口采集子包（帧协议、8N1 串口配置、停等接收状态机、
+  独立 CLI 与伪终端测试器），只用标准库。
 - `data/`：旧校准表、仪器结果与策略，以及新的按时间校准示例和来源声明。
 - `examples/warehouse/`：原创合成报告与导入/更正 manifest 示例（不含运行数据库）。
 - `tests/`：已知数值、版本边界、契约错误、重复运行、坏输入、CLI 子进程端到端、
-  HTML 转义，以及数据集市幂等、更正、并发与恢复验证。
+  HTML 转义，数据集市幂等、更正、并发与恢复验证，以及串口采集的摘要独立核对、
+  停等/拆粘帧、重传/断流/冲突、写入与发布失败注入。
 
 数据可离线分析；没有仪器驱动、外部账号或趋势模型。校准版本只按测量时间选择，
 不增加 QC 前后夹持或时间窗口规则。运行文件忽略，每仓独立环境。MIT 许可覆盖代码
