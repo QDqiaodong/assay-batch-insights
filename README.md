@@ -55,14 +55,39 @@ python3 -m venv .venv
 新旧混用等）才以非零状态失败，并在写输出前完成校验，不改变已有报告。
 完整口径、阈值作用域、舍入和零值规则见 `docs/metrics.md`。
 
+## 纵向结果数据集市（SQLite）
+
+`assay_insights.warehouse` 是独立的标准库 + SQLite 数据集市，把多次离线分析的 JSON
+产物长期沉淀下来，并能重建任意一次成功导入后生效的批次判定。它不重新读取 CSV、
+不重算校准选择，只保存并核对报告所声称的事实；原始 `load`/`analyze`/`run` 与原 CLI
+完全兼容，schema 1/2 报告继续可用。
+
+```sh
+# 导入合成 manifest（捕获原始字节、校验自洽性、写入单个 SQLite 事务）
+python -m assay_insights.warehouse --db /tmp/assay.sqlite \
+  --manifest examples/warehouse/IMP-001-legacy.json
+# report-only 查询，不写数据库；省略 --knowledge-seq 即查询最新版本
+python -m assay_insights.warehouse --db /tmp/assay.sqlite --report \
+  --knowledge-seq 1 --output /tmp/seq1.json
+```
+
+同一 `import_id` 与相同字节重放幂等、不增加知识序号；任一字节变化即整次冲突。
+报告只在记录/键顺序上不同会得到不同原始哈希但相同规范事实，不放大测量或样本数量。
+`rename_sample`/`withdraw_sample` 只改变更正后视图与可见性，原始报告判定与纵向变化链
+保持不变。完整口径、表结构、更正语义、并发事务与恢复说明见
+[docs/warehouse.md](docs/warehouse.md)。
+
 ## 结构与边界
 
 - `assay_insights/input.py`：校准、样本、策略契约；按完整表头识别新旧两套格式。
 - `assay_insights/metrics.py`：Decimal 统计和按校准版本隔离的批次质控传播。
 - `assay_insights/report.py`：来源哈希、schema 1/2 JSON 和 HTML。
+- `assay_insights/warehouse/`：SQLite 纵向数据集市（清单/报告校验、知识版本、
+  更正视图、纵向变化查询与独立 CLI）。
 - `data/`：旧校准表、仪器结果与策略，以及新的按时间校准示例和来源声明。
-- `tests/`：已知数值、版本边界、契约错误、重复运行、坏输入、CLI 子进程端到端与
-  HTML 转义验证。
+- `examples/warehouse/`：原创合成报告与导入/更正 manifest 示例（不含运行数据库）。
+- `tests/`：已知数值、版本边界、契约错误、重复运行、坏输入、CLI 子进程端到端、
+  HTML 转义，以及数据集市幂等、更正、并发与恢复验证。
 
 数据可离线分析；没有仪器驱动、外部账号或趋势模型。校准版本只按测量时间选择，
 不增加 QC 前后夹持或时间窗口规则。运行文件忽略，每仓独立环境。MIT 许可覆盖代码

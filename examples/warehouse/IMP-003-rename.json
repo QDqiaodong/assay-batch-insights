@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "import_id": "IMP-003",
+  "action": "apply",
+  "reports": [
+    {
+      "path": "reports/2026-03-02-morning/report.json",
+      "label": "legacy-source-link"
+    }
+  ],
+  "corrections": [
+    {
+      "correction_id": "COR-001",
+      "target": {
+        "report_sha256": "d0c649f3df1dd71a093407c7547865fd026e34a829099a90750787625910b761",
+        "batch": "B1",
+        "sample": "S1",
+        "analyte": "nitrate"
+      },
+      "operation": "rename_sample",
+      "new_sample": "S1-R",
+      "reason": "synthetic transcription correction"
+    }
+  ]
+}

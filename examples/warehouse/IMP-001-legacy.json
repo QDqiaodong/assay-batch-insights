@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "import_id": "IMP-001",
+  "action": "apply",
+  "reports": [
+    {
+      "path": "reports/2026-03-02-morning/report.json",
+      "label": "morning-legacy"
+    }
+  ],
+  "corrections": []
+}
