@@ -1,0 +1,18 @@
+{
+  "db": "diagnostics-run/records/output/import__prec-8/warehouse.sqlite",
+  "factor": {
+    "kind": "decimal",
+    "label": "prec-8",
+    "prec": 8
+  },
+  "fixture": "examples",
+  "id": "warehouse-import__examples__prec-8",
+  "manifests": [
+    "IMP-001-legacy.json",
+    "IMP-002-timed.json",
+    "IMP-003-rename.json",
+    "IMP-004-rerun.json"
+  ],
+  "package": "diagnostics-run/freeze/package",
+  "scenario": "warehouse-import"
+}

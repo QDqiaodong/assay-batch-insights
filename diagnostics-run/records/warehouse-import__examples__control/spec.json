@@ -1,0 +1,17 @@
+{
+  "db": "diagnostics-run/records/output/import__control/warehouse.sqlite",
+  "factor": {
+    "kind": "decimal",
+    "label": "control"
+  },
+  "fixture": "examples",
+  "id": "warehouse-import__examples__control",
+  "manifests": [
+    "IMP-001-legacy.json",
+    "IMP-002-timed.json",
+    "IMP-003-rename.json",
+    "IMP-004-rerun.json"
+  ],
+  "package": "diagnostics-run/freeze/package",
+  "scenario": "warehouse-import"
+}

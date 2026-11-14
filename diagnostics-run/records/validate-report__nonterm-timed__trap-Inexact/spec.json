@@ -1,0 +1,13 @@
+{
+  "factor": {
+    "kind": "decimal",
+    "label": "trap-Inexact",
+    "traps": [
+      "Inexact"
+    ]
+  },
+  "fixture": "nonterm-timed",
+  "id": "validate-report__nonterm-timed__trap-Inexact",
+  "report": "diagnostics-run/freeze/reports/nonterm-timed/report.json",
+  "scenario": "validate-report"
+}

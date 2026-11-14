@@ -1,0 +1,10 @@
+{
+  "factor": {
+    "kind": "decimal",
+    "label": "control"
+  },
+  "fixture": "nonterm-legacy",
+  "id": "validate-report__nonterm-legacy__control",
+  "report": "diagnostics-run/freeze/reports/nonterm-legacy/report.json",
+  "scenario": "validate-report"
+}

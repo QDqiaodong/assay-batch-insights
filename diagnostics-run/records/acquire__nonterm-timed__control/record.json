@@ -1,0 +1,152 @@
+{
+  "context_actual": {
+    "Emax": 999999,
+    "Emin": -999999,
+    "clamp": 0,
+    "flags": [],
+    "prec": 28,
+    "rounding": "ROUND_HALF_EVEN",
+    "traps": [
+      "DivisionByZero",
+      "InvalidOperation",
+      "Overflow"
+    ]
+  },
+  "context_requested": {},
+  "environment": {
+    "PYTHONHASHSEED": "0",
+    "TZ": "UTC",
+    "python": "3.11.2"
+  },
+  "factor": {
+    "kind": "decimal",
+    "label": "control"
+  },
+  "harness_status": "ok",
+  "id": "acquire__nonterm-timed__control",
+  "observed_factor": true,
+  "scenario": "acquire",
+  "spec": {
+    "calibrations": "diagnostics-run/freeze/fixtures/nonterm-timed/calibrations.csv",
+    "factor": {
+      "kind": "decimal",
+      "label": "control"
+    },
+    "fixture": "nonterm-timed",
+    "id": "acquire__nonterm-timed__control",
+    "idle_timeout": 3,
+    "output": "diagnostics-run/records/output/acquire__nonterm-timed__control",
+    "policy": "diagnostics-run/freeze/fixtures/nonterm-timed/policy.json",
+    "results": "diagnostics-run/freeze/fixtures/nonterm-timed/results.csv",
+    "run_id": "run-1",
+    "scenario": "acquire"
+  },
+  "stages": [
+    {
+      "error": null,
+      "flags": [],
+      "stage": "context",
+      "status": "ok",
+      "values": {
+        "Emax": 999999,
+        "Emin": -999999,
+        "clamp": 0,
+        "flags": [],
+        "prec": 28,
+        "rounding": "ROUND_HALF_EVEN",
+        "source": "interpreter default",
+        "traps": [
+          "DivisionByZero",
+          "InvalidOperation",
+          "Overflow"
+        ]
+      }
+    },
+    {
+      "error": null,
+      "flags": [],
+      "stage": "process",
+      "status": "ok",
+      "values": {
+        "command": [
+          "/usr/bin/python3",
+          "-m",
+          "assay_insights.acquire",
+          "--device",
+          "/dev/pts/1",
+          "--baud",
+          "115200",
+          "--calibrations",
+          "diagnostics-run/freeze/fixtures/nonterm-timed/calibrations.csv",
+          "--policy",
+          "diagnostics-run/freeze/fixtures/nonterm-timed/policy.json",
+          "--output",
+          "<trial-dir>",
+          "--timeout",
+          "3"
+        ],
+        "exit_code": 0,
+        "product_frame": null,
+        "reaped": true,
+        "stderr_last": null,
+        "stderr_tail": [],
+        "stdout": "{\"batch\": \"B1\", \"calibration_sha256\": \"149dc090ea963b1666285348bd979150fc42b86217ebdfb6a70a1514259d3ecc\", \"count\": 3, \"format\": \"assay-insights.serial-run/1\", \"frames_sha256\": \"0804295e9a1f108383a307ffc169767fcf6a4724700961b2044c094e31f1ab1f\", \"measurements_sha256\": \"4f3e154c8f3844f6e7b5e300026eb1324dca76844756a0b52b8d5a7baad17f7b\", \"policy_sha256\": \"d65da63ba930cb0b8d9ecf2960016dce58b71423b67fa8cdb268ad4b3939e1e0\", \"results_sha256\": \"f19804323232d66fa3c0d759498d6680070e351b172b276e6d0b6d5a4201655c\", \"run_id\": \"run-1\"}"
+      }
+    },
+    {
+      "error": null,
+      "flags": [],
+      "stage": "instrument",
+      "status": "ok",
+      "values": {
+        "outcome": "acked"
+      }
+    },
+    {
+      "error": null,
+      "flags": [],
+      "stage": "artifact",
+      "status": "ok",
+      "values": {
+        "frames.log": {
+          "bytes": 945,
+          "sha256": "0804295e9a1f108383a307ffc169767fcf6a4724700961b2044c094e31f1ab1f"
+        },
+        "published": true,
+        "results.csv": {
+          "bytes": 222,
+          "sha256": "f19804323232d66fa3c0d759498d6680070e351b172b276e6d0b6d5a4201655c"
+        },
+        "staging_error_json": null,
+        "staging_exists": false,
+        "summary": {
+          "batch": "B1",
+          "calibration_sha256": "149dc090ea963b1666285348bd979150fc42b86217ebdfb6a70a1514259d3ecc",
+          "count": 3,
+          "format": "assay-insights.serial-run/1",
+          "frames_sha256": "0804295e9a1f108383a307ffc169767fcf6a4724700961b2044c094e31f1ab1f",
+          "measurements_sha256": "4f3e154c8f3844f6e7b5e300026eb1324dca76844756a0b52b8d5a7baad17f7b",
+          "policy_sha256": "d65da63ba930cb0b8d9ecf2960016dce58b71423b67fa8cdb268ad4b3939e1e0",
+          "results_sha256": "f19804323232d66fa3c0d759498d6680070e351b172b276e6d0b6d5a4201655c",
+          "run_id": "run-1"
+        },
+        "summary.json": {
+          "bytes": 545,
+          "sha256": "252ffacc51ee47d0d55864e2062898243d489e606ccc1a8e3d09abb333ef0654"
+        }
+      }
+    },
+    {
+      "error": null,
+      "flags": [],
+      "stage": "default_validation",
+      "status": "ok",
+      "values": {
+        "exit_code": 0,
+        "status": "accepted",
+        "stderr_tail": []
+      }
+    }
+  ],
+  "trial_dir": "diagnostics-run/records/acquire__nonterm-timed__control"
+}

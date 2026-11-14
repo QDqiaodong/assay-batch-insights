@@ -1,0 +1,10 @@
+{
+  "factor": {
+    "kind": "decimal",
+    "label": "control"
+  },
+  "fixture": "clean-timed",
+  "id": "validate-report__clean-timed__control",
+  "report": "diagnostics-run/freeze/reports/clean-timed/report.json",
+  "scenario": "validate-report"
+}

@@ -1,0 +1,126 @@
+{
+  "context_actual": {
+    "Emax": 999999,
+    "Emin": -999999,
+    "clamp": 0,
+    "flags": [],
+    "prec": 28,
+    "rounding": "ROUND_HALF_EVEN",
+    "traps": [
+      "DivisionByZero",
+      "InvalidOperation",
+      "Overflow"
+    ]
+  },
+  "context_requested": {},
+  "environment": {
+    "PYTHONHASHSEED": "0",
+    "TZ": "UTC",
+    "python": "3.11.2"
+  },
+  "factor": {
+    "kind": "decimal",
+    "label": "control"
+  },
+  "harness_status": "ok",
+  "id": "run__nonterm-timed__control",
+  "observed_factor": true,
+  "scenario": "run",
+  "spec": {
+    "calibrations": "diagnostics-run/freeze/fixtures/nonterm-timed/calibrations.csv",
+    "factor": {
+      "kind": "decimal",
+      "label": "control"
+    },
+    "fixture": "nonterm-timed",
+    "id": "run__nonterm-timed__control",
+    "output": "diagnostics-run/records/output/run__nonterm-timed__control",
+    "policy": "diagnostics-run/freeze/fixtures/nonterm-timed/policy.json",
+    "results": "diagnostics-run/freeze/fixtures/nonterm-timed/results.csv",
+    "scenario": "run"
+  },
+  "stages": [
+    {
+      "error": null,
+      "flags": [],
+      "stage": "context",
+      "status": "ok",
+      "values": {
+        "Emax": 999999,
+        "Emin": -999999,
+        "clamp": 0,
+        "flags": [],
+        "prec": 28,
+        "rounding": "ROUND_HALF_EVEN",
+        "traps": [
+          "DivisionByZero",
+          "InvalidOperation",
+          "Overflow"
+        ]
+      }
+    },
+    {
+      "error": null,
+      "flags": [
+        "Inexact",
+        "Rounded"
+      ],
+      "stage": "run",
+      "status": "ok",
+      "values": {
+        "schema_version": 2,
+        "summary": {
+          "reportable_groups": 1,
+          "sample_groups": 1
+        }
+      }
+    },
+    {
+      "error": null,
+      "flags": [
+        "Inexact",
+        "Rounded"
+      ],
+      "stage": "analyze",
+      "status": "ok",
+      "values": {
+        "quality_controls": {
+          "B1/nitrate/Q1/C1": {
+            "passed": true,
+            "recovery": "100.000000"
+          }
+        },
+        "samples": {
+          "B1/nitrate/S1": {
+            "mean": "3.333333",
+            "reasons": [],
+            "reportable": true,
+            "rsd": "0.000000",
+            "sd": "0.000000"
+          }
+        },
+        "summary": {
+          "reportable_groups": 1,
+          "sample_groups": 1
+        }
+      }
+    },
+    {
+      "error": null,
+      "flags": [],
+      "stage": "artifact",
+      "status": "ok",
+      "values": {
+        "report.html": {
+          "bytes": 2526,
+          "sha256": "4fabbc586f9859fbcbfa167ca51d70a6239ef4359eb6f5ddeaa7e1b60aa45640"
+        },
+        "report.json": {
+          "bytes": 3069,
+          "sha256": "273c6f28332c46dd03f8eacaf03e8d8eb458f84e332744f4d183f0a6adde176c"
+        }
+      }
+    }
+  ],
+  "trial_dir": "diagnostics-run/records/run__nonterm-timed__control"
+}

@@ -1,0 +1,17 @@
+{
+  "calibrations": "diagnostics-run/freeze/fixtures/nonterm-legacy/calibrations.csv",
+  "factor": {
+    "kind": "decimal",
+    "label": "control"
+  },
+  "fixture": "nonterm-legacy",
+  "id": "wrapper__benign-passthrough__nonterm-legacy",
+  "policy": "diagnostics-run/freeze/fixtures/nonterm-legacy/policy.json",
+  "results": "diagnostics-run/freeze/fixtures/nonterm-legacy/results.csv",
+  "scenario": "analyze",
+  "wrapper": {
+    "kind": "benign",
+    "target": "_statistics"
+  },
+  "wrapper_label": "benign-passthrough"
+}

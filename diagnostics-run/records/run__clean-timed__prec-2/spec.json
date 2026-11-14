@@ -1,0 +1,14 @@
+{
+  "calibrations": "diagnostics-run/freeze/fixtures/clean-timed/calibrations.csv",
+  "factor": {
+    "kind": "decimal",
+    "label": "prec-2",
+    "prec": 2
+  },
+  "fixture": "clean-timed",
+  "id": "run__clean-timed__prec-2",
+  "output": "diagnostics-run/records/output/run__clean-timed__prec-2",
+  "policy": "diagnostics-run/freeze/fixtures/clean-timed/policy.json",
+  "results": "diagnostics-run/freeze/fixtures/clean-timed/results.csv",
+  "scenario": "run"
+}

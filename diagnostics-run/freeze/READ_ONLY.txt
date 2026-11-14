@@ -1,0 +1,1 @@
+Frozen inputs, fixtures and package are hashed in FROZEN.json. No trial writes into this tree; trials receive copies only.

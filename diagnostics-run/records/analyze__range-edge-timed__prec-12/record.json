@@ -1,0 +1,114 @@
+{
+  "context_actual": {
+    "Emax": 999999,
+    "Emin": -999999,
+    "clamp": 0,
+    "flags": [],
+    "prec": 12,
+    "rounding": "ROUND_HALF_EVEN",
+    "traps": [
+      "DivisionByZero",
+      "InvalidOperation",
+      "Overflow"
+    ]
+  },
+  "context_requested": {
+    "prec": 12
+  },
+  "environment": {
+    "PYTHONHASHSEED": "0",
+    "TZ": "UTC",
+    "python": "3.11.2"
+  },
+  "factor": {
+    "kind": "decimal",
+    "label": "prec-12",
+    "prec": 12
+  },
+  "harness_status": "ok",
+  "id": "analyze__range-edge-timed__prec-12",
+  "observed_factor": true,
+  "scenario": "analyze",
+  "spec": {
+    "calibrations": "diagnostics-run/freeze/fixtures/range-edge-timed/calibrations.csv",
+    "factor": {
+      "kind": "decimal",
+      "label": "prec-12",
+      "prec": 12
+    },
+    "fixture": "range-edge-timed",
+    "id": "analyze__range-edge-timed__prec-12",
+    "policy": "diagnostics-run/freeze/fixtures/range-edge-timed/policy.json",
+    "results": "diagnostics-run/freeze/fixtures/range-edge-timed/results.csv",
+    "scenario": "analyze"
+  },
+  "stages": [
+    {
+      "error": null,
+      "flags": [],
+      "stage": "context",
+      "status": "ok",
+      "values": {
+        "Emax": 999999,
+        "Emin": -999999,
+        "clamp": 0,
+        "flags": [],
+        "prec": 12,
+        "rounding": "ROUND_HALF_EVEN",
+        "traps": [
+          "DivisionByZero",
+          "InvalidOperation",
+          "Overflow"
+        ]
+      }
+    },
+    {
+      "error": {
+        "frames": [
+          {
+            "file": "diagnostics/trial.py",
+            "function": "scenario_analyze",
+            "line": 229
+          },
+          {
+            "file": "assay_insights/input.py",
+            "function": "load",
+            "line": 308
+          },
+          {
+            "file": "assay_insights/input.py",
+            "function": "_load_timed",
+            "line": 264
+          },
+          {
+            "file": "assay_insights/input.py",
+            "function": "_fail",
+            "line": 44
+          }
+        ],
+        "location": {
+          "file": "assay_insights/input.py",
+          "function": "_fail",
+          "line": 44,
+          "origin": {
+            "file": "assay_insights/input.py",
+            "function": "_load_timed",
+            "line": 264,
+            "source": "_fail(results_path, line, \"calibrated concentration must be between 0 and 1e12 mg/L\")"
+          },
+          "source": "raise ValueError(f\"{location}: {message}\")"
+        },
+        "message": "diagnostics-run/freeze/fixtures/range-edge-timed/results.csv:2: calibrated concentration must be between 0 and 1e12 mg/L",
+        "type": "builtins.ValueError"
+      },
+      "flags": [
+        "Inexact",
+        "Rounded"
+      ],
+      "stage": "load",
+      "status": "error",
+      "values": {}
+    }
+  ],
+  "trial_dir": "diagnostics-run/records/analyze__range-edge-timed__prec-12"
+}

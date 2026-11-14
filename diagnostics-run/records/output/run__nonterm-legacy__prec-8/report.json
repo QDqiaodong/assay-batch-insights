@@ -1,0 +1,53 @@
+{
+  "batches": [
+    {
+      "analyte": "nitrate",
+      "batch": "B1",
+      "qc_groups": 1,
+      "qc_passed": true
+    }
+  ],
+  "inputs_sha256": {
+    "calibrations": "77985fd5e37e7b5684703988c76eefe2f7d3edf1bb2589e6288b079a8b8c9a8b",
+    "policy": "d65da63ba930cb0b8d9ecf2960016dce58b71423b67fa8cdb268ad4b3939e1e0",
+    "results": "7d1299c18f5724a432df747cbb8033ab2591442190c4d108d2ca78ca288e096a"
+  },
+  "policy": {
+    "max_rsd_pct": "10",
+    "min_replicates": 2,
+    "qc_high_pct": "120",
+    "qc_low_pct": "80"
+  },
+  "quality_controls": [
+    {
+      "analyte": "nitrate",
+      "batch": "B1",
+      "mean_mg_l": "7.000000",
+      "n": 1,
+      "passed": true,
+      "recovery_pct": "100.000000",
+      "rsd_pct": null,
+      "sample": "Q1",
+      "sample_sd_mg_l": null
+    }
+  ],
+  "samples": [
+    {
+      "analyte": "nitrate",
+      "batch": "B1",
+      "mean_mg_l": "3.500000",
+      "n": 2,
+      "reasons": [],
+      "reportable": true,
+      "rsd_pct": "6.734352",
+      "sample": "S1",
+      "sample_sd_mg_l": "0.235702"
+    }
+  ],
+  "schema_version": 1,
+  "summary": {
+    "reportable_groups": 1,
+    "sample_groups": 1
+  },
+  "unit": "mg/L"
+}

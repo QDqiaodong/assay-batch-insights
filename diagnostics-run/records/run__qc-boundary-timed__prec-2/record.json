@@ -1,0 +1,130 @@
+{
+  "context_actual": {
+    "Emax": 999999,
+    "Emin": -999999,
+    "clamp": 0,
+    "flags": [],
+    "prec": 2,
+    "rounding": "ROUND_HALF_EVEN",
+    "traps": [
+      "DivisionByZero",
+      "InvalidOperation",
+      "Overflow"
+    ]
+  },
+  "context_requested": {
+    "prec": 2
+  },
+  "environment": {
+    "PYTHONHASHSEED": "0",
+    "TZ": "UTC",
+    "python": "3.11.2"
+  },
+  "factor": {
+    "kind": "decimal",
+    "label": "prec-2",
+    "prec": 2
+  },
+  "harness_status": "ok",
+  "id": "run__qc-boundary-timed__prec-2",
+  "observed_factor": true,
+  "scenario": "run",
+  "spec": {
+    "calibrations": "diagnostics-run/freeze/fixtures/qc-boundary-timed/calibrations.csv",
+    "factor": {
+      "kind": "decimal",
+      "label": "prec-2",
+      "prec": 2
+    },
+    "fixture": "qc-boundary-timed",
+    "id": "run__qc-boundary-timed__prec-2",
+    "output": "diagnostics-run/records/output/run__qc-boundary-timed__prec-2",
+    "policy": "diagnostics-run/freeze/fixtures/qc-boundary-timed/policy.json",
+    "results": "diagnostics-run/freeze/fixtures/qc-boundary-timed/results.csv",
+    "scenario": "run"
+  },
+  "stages": [
+    {
+      "error": null,
+      "flags": [],
+      "stage": "context",
+      "status": "ok",
+      "values": {
+        "Emax": 999999,
+        "Emin": -999999,
+        "clamp": 0,
+        "flags": [],
+        "prec": 2,
+        "rounding": "ROUND_HALF_EVEN",
+        "traps": [
+          "DivisionByZero",
+          "InvalidOperation",
+          "Overflow"
+        ]
+      }
+    },
+    {
+      "error": null,
+      "flags": [
+        "Inexact",
+        "Rounded"
+      ],
+      "stage": "run",
+      "status": "ok",
+      "values": {
+        "schema_version": 2,
+        "summary": {
+          "reportable_groups": 1,
+          "sample_groups": 1
+        }
+      }
+    },
+    {
+      "error": null,
+      "flags": [
+        "Inexact",
+        "Rounded"
+      ],
+      "stage": "analyze",
+      "status": "ok",
+      "values": {
+        "quality_controls": {
+          "B1/nitrate/Q1/C1": {
+            "passed": true,
+            "recovery": "120.000000"
+          }
+        },
+        "samples": {
+          "B1/nitrate/S1": {
+            "mean": "10.000000",
+            "reasons": [],
+            "reportable": true,
+            "rsd": "10.000000",
+            "sd": "1.000000"
+          }
+        },
+        "summary": {
+          "reportable_groups": 1,
+          "sample_groups": 1
+        }
+      }
+    },
+    {
+      "error": null,
+      "flags": [],
+      "stage": "artifact",
+      "status": "ok",
+      "values": {
+        "report.html": {
+          "bytes": 2715,
+          "sha256": "f8987295f5406a6b9d0515af4e35a3a791206bae37dcb8e914076f00b23c2ee8"
+        },
+        "report.json": {
+          "bytes": 3538,
+          "sha256": "ed9e7201d986eb68c09ffca2ac033b44a7b4d32eb38f13d04cc290153eae018e"
+        }
+      }
+    }
+  ],
+  "trial_dir": "diagnostics-run/records/run__qc-boundary-timed__prec-2"
+}

@@ -1,0 +1,4 @@
+batch,sample,analyte,replicate,kind,signal,dilution,target_mg_l
+B1,S1,nitrate,1,sample,535355339059,1,
+B1,S1,nitrate,2,sample,464644660941,1,
+B1,Q1,nitrate,1,QC,10,1,10

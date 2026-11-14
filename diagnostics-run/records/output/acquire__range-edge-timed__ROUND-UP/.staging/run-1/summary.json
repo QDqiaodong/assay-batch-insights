@@ -1,0 +1,11 @@
+{
+  "batch": "B1",
+  "calibration_sha256": "0c2a648dea05cf95682e6aeaafdb18ab1066deddea29292a24cba029a244e6ad",
+  "count": 3,
+  "format": "assay-insights.serial-run/1",
+  "frames_sha256": "3594a4a66ef7c2661b738e8edecf9d188c0c3a482f3e7a7c5f3e0a0fb37edf10",
+  "measurements_sha256": "dc1722d6b213845c8b9bfe0be7ef163dc82e69929bd6c6b205bbc35992c18187",
+  "policy_sha256": "d65da63ba930cb0b8d9ecf2960016dce58b71423b67fa8cdb268ad4b3939e1e0",
+  "results_sha256": "8814e18cceefaddd220949d8a53f05fb903739c2dd912c85840b36a821029131",
+  "run_id": "run-1"
+}

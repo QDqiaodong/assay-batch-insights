@@ -1,0 +1,14 @@
+{
+  "calibrations": "diagnostics-run/freeze/fixtures/qc-boundary-legacy/calibrations.csv",
+  "factor": {
+    "kind": "env",
+    "name": "PYTHONHASHSEED",
+    "value": "12345"
+  },
+  "fixture": "qc-boundary-legacy",
+  "id": "cli__qc-boundary-legacy__PYTHONHASHSEED-12345",
+  "output": "diagnostics-run/records/output/cli__qc-boundary-legacy__PYTHONHASHSEED-12345",
+  "policy": "diagnostics-run/freeze/fixtures/qc-boundary-legacy/policy.json",
+  "results": "diagnostics-run/freeze/fixtures/qc-boundary-legacy/results.csv",
+  "scenario": "cli"
+}

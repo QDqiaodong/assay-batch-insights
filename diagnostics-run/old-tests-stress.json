@@ -1,0 +1,47 @@
+{
+  "command": "/usr/bin/python3 -m unittest tests.test_warehouse_concurrency.ConcurrencyTests.test_two_distinct_packages_serialize_to_contiguous_ledger",
+  "conclusion": "Pre-existing scheduling assumption in the test, not a decimal-context effect: the same test fails with the ledger in the reverse order and no decimal factor applied.",
+  "context": "default (prec 28, ROUND_HALF_EVEN), TZ=UTC",
+  "duration_s": 12.35,
+  "failure_details": [
+    {
+      "assertion": "AssertionError: Lists differ: [(1, 'IMP-B'), (2, 'IMP-A')] != [(1, 'IMP-A'), (2, 'IMP-B')]",
+      "iteration": 1,
+      "tail": [
+        "",
+        "First differing element 0:",
+        "(1, 'IMP-B')",
+        "(1, 'IMP-A')",
+        "",
+        "- [(1, 'IMP-B'), (2, 'IMP-A')]",
+        "+ [(1, 'IMP-A'), (2, 'IMP-B')]",
+        "",
+        "----------------------------------------------------------------------",
+        "Ran 1 test in 0.065s",
+        "",
+        "FAILED (failures=1)"
+      ]
+    },
+    {
+      "assertion": "AssertionError: Lists differ: [(1, 'IMP-B'), (2, 'IMP-A')] != [(1, 'IMP-A'), (2, 'IMP-B')]",
+      "iteration": 56,
+      "tail": [
+        "",
+        "First differing element 0:",
+        "(1, 'IMP-B')",
+        "(1, 'IMP-A')",
+        "",
+        "- [(1, 'IMP-B'), (2, 'IMP-A')]",
+        "+ [(1, 'IMP-A'), (2, 'IMP-B')]",
+        "",
+        "----------------------------------------------------------------------",
+        "Ran 1 test in 0.049s",
+        "",
+        "FAILED (failures=1)"
+      ]
+    }
+  ],
+  "failures": 2,
+  "iterations": 120,
+  "load_processes": 4
+}

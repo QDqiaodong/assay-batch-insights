@@ -1,0 +1,16 @@
+{
+  "calibrations": "diagnostics-run/freeze/fixtures/clean-timed/calibrations.csv",
+  "factor": {
+    "kind": "decimal",
+    "label": "ROUND-UP",
+    "rounding": "ROUND_UP"
+  },
+  "fixture": "clean-timed",
+  "id": "acquire__clean-timed__ROUND-UP",
+  "idle_timeout": 3,
+  "output": "diagnostics-run/records/output/acquire__clean-timed__ROUND-UP",
+  "policy": "diagnostics-run/freeze/fixtures/clean-timed/policy.json",
+  "results": "diagnostics-run/freeze/fixtures/clean-timed/results.csv",
+  "run_id": "run-1",
+  "scenario": "acquire"
+}

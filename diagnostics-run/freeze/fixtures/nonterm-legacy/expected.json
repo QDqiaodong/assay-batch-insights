@@ -1,0 +1,43 @@
+{
+  "format": "legacy",
+  "groups": {
+    "B1/nitrate/Q1": {
+      "decision_note": "inclusive limits applied to the unrounded recovery; display is not used for the decision",
+      "display_would_suggest_passed": true,
+      "kind": "QC",
+      "mean_display_6dp": "7.000000",
+      "mean_exact": "7",
+      "n": 1,
+      "passed_at_default_context": true,
+      "recovery_50dp": "100",
+      "recovery_display_6dp": "100.000000",
+      "recovery_display_is_near_half_tie": false,
+      "recovery_exact": "100",
+      "target_exact": "7"
+    },
+    "B1/nitrate/S1": {
+      "decision_note": "strict > on the unrounded RSD, evaluated exactly; the six-decimal display cannot express a near-tie",
+      "full_50dp": {
+        "rsd": "6.734350297014738327627089163",
+        "sd": "0.235702260395515841466948120701616346428278645896158012196113289665122079743684506475064589054606928789168974371818716171"
+      },
+      "kind": "sample",
+      "max_rsd_pct": "10",
+      "mean_display_6dp": "3.500000",
+      "mean_exact": "7/2",
+      "n": 2,
+      "reasons_at_default_context": [],
+      "rsd_display_6dp": "6.734350",
+      "rsd_display_is_near_half_tie": false,
+      "rsd_exact_note": "irrational; see sd_squared_exact",
+      "sd_display_6dp": "0.235702",
+      "sd_squared_exact": "1/18"
+    }
+  },
+  "intent": "Replicates calibrate to 10/3 and 11/3, both non-terminating in base 10. The mean is exactly 7/2 and the SD is sqrt(2)/6, so every statistic is repeating or irrational while all decisions sit comfortably inside the policy window.",
+  "load": {
+    "accepted_at_default_context": true,
+    "bound": "0 <= concentration <= 1000000000000 mg/L",
+    "concentration_max_exact": "7"
+  }
+}

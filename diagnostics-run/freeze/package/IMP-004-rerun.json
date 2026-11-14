@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "import_id": "IMP-004",
+  "action": "apply",
+  "reports": [
+    {
+      "path": "reports/2026-03-04-rerun/report.json",
+      "label": "rerun-timed"
+    }
+  ],
+  "corrections": []
+}

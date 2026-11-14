@@ -1,0 +1,13 @@
+{
+  "calibrations": "diagnostics-run/freeze/fixtures/clean-timed/calibrations.csv",
+  "factor": {
+    "kind": "decimal",
+    "label": "ROUND-DOWN",
+    "rounding": "ROUND_DOWN"
+  },
+  "fixture": "clean-timed",
+  "id": "analyze__clean-timed__ROUND-DOWN",
+  "policy": "diagnostics-run/freeze/fixtures/clean-timed/policy.json",
+  "results": "diagnostics-run/freeze/fixtures/clean-timed/results.csv",
+  "scenario": "analyze"
+}

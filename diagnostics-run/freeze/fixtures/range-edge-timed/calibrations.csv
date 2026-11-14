@@ -1,0 +1,2 @@
+analyte,calibration_id,valid_from,valid_to,slope,intercept,unit
+nitrate,C1,2026-01-01T00:00:00Z,,1,0,mg/L

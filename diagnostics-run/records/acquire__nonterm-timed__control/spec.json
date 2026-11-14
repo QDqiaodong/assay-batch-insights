@@ -1,0 +1,15 @@
+{
+  "calibrations": "diagnostics-run/freeze/fixtures/nonterm-timed/calibrations.csv",
+  "factor": {
+    "kind": "decimal",
+    "label": "control"
+  },
+  "fixture": "nonterm-timed",
+  "id": "acquire__nonterm-timed__control",
+  "idle_timeout": 3,
+  "output": "diagnostics-run/records/output/acquire__nonterm-timed__control",
+  "policy": "diagnostics-run/freeze/fixtures/nonterm-timed/policy.json",
+  "results": "diagnostics-run/freeze/fixtures/nonterm-timed/results.csv",
+  "run_id": "run-1",
+  "scenario": "acquire"
+}

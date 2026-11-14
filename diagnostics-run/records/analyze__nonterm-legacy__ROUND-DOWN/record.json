@@ -1,0 +1,163 @@
+{
+  "context_actual": {
+    "Emax": 999999,
+    "Emin": -999999,
+    "clamp": 0,
+    "flags": [],
+    "prec": 28,
+    "rounding": "ROUND_DOWN",
+    "traps": [
+      "DivisionByZero",
+      "InvalidOperation",
+      "Overflow"
+    ]
+  },
+  "context_requested": {
+    "rounding": "ROUND_DOWN"
+  },
+  "environment": {
+    "PYTHONHASHSEED": "0",
+    "TZ": "UTC",
+    "python": "3.11.2"
+  },
+  "factor": {
+    "kind": "decimal",
+    "label": "ROUND-DOWN",
+    "rounding": "ROUND_DOWN"
+  },
+  "harness_status": "ok",
+  "id": "analyze__nonterm-legacy__ROUND-DOWN",
+  "observed_factor": true,
+  "scenario": "analyze",
+  "spec": {
+    "calibrations": "diagnostics-run/freeze/fixtures/nonterm-legacy/calibrations.csv",
+    "factor": {
+      "kind": "decimal",
+      "label": "ROUND-DOWN",
+      "rounding": "ROUND_DOWN"
+    },
+    "fixture": "nonterm-legacy",
+    "id": "analyze__nonterm-legacy__ROUND-DOWN",
+    "policy": "diagnostics-run/freeze/fixtures/nonterm-legacy/policy.json",
+    "results": "diagnostics-run/freeze/fixtures/nonterm-legacy/results.csv",
+    "scenario": "analyze"
+  },
+  "stages": [
+    {
+      "error": null,
+      "flags": [],
+      "stage": "context",
+      "status": "ok",
+      "values": {
+        "Emax": 999999,
+        "Emin": -999999,
+        "clamp": 0,
+        "flags": [],
+        "prec": 28,
+        "rounding": "ROUND_DOWN",
+        "traps": [
+          "DivisionByZero",
+          "InvalidOperation",
+          "Overflow"
+        ]
+      }
+    },
+    {
+      "error": null,
+      "flags": [
+        "Inexact",
+        "Rounded"
+      ],
+      "stage": "load",
+      "status": "ok",
+      "values": {
+        "measurements": [
+          {
+            "concentration_exact": "3.333333333333333333333333333",
+            "key": "B1/nitrate/S1/1"
+          },
+          {
+            "concentration_exact": "3.666666666666666666666666666",
+            "key": "B1/nitrate/S1/2"
+          },
+          {
+            "concentration_exact": "7",
+            "key": "B1/nitrate/Q1/1"
+          }
+        ]
+      }
+    },
+    {
+      "error": null,
+      "flags": [
+        "Inexact",
+        "Rounded"
+      ],
+      "stage": "statistics",
+      "status": "ok",
+      "values": {
+        "B1/nitrate/Q1/None": {
+          "mean_exact": "7",
+          "n": 1,
+          "rsd_exact": null,
+          "sd_exact": null
+        },
+        "B1/nitrate/S1/None": {
+          "mean_exact": "3.499999999999999999999999999",
+          "n": 2,
+          "rsd_exact": "6.734350297014738327627089156",
+          "sd_exact": "0.2357022603955158414669481204"
+        }
+      }
+    },
+    {
+      "error": null,
+      "flags": [
+        "Inexact",
+        "Rounded"
+      ],
+      "stage": "qc_recovery",
+      "status": "ok",
+      "values": {
+        "B1/nitrate/Q1/None": {
+          "limits": [
+            "80",
+            "120"
+          ],
+          "recovery_exact": "100"
+        }
+      }
+    },
+    {
+      "error": null,
+      "flags": [
+        "Inexact",
+        "Rounded"
+      ],
+      "stage": "analyze",
+      "status": "ok",
+      "values": {
+        "quality_controls": {
+          "B1/nitrate/Q1/None": {
+            "passed": true,
+            "recovery": "100.000000"
+          }
+        },
+        "samples": {
+          "B1/nitrate/S1": {
+            "mean": "3.499999",
+            "reasons": [],
+            "reportable": true,
+            "rsd": "6.734350",
+            "sd": "0.235702"
+          }
+        },
+        "summary": {
+          "reportable_groups": 1,
+          "sample_groups": 1
+        }
+      }
+    }
+  ],
+  "trial_dir": "diagnostics-run/records/analyze__nonterm-legacy__ROUND-DOWN"
+}

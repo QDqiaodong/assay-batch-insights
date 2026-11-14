@@ -1,0 +1,11 @@
+{
+  "factor": {
+    "kind": "decimal",
+    "label": "ROUND-DOWN",
+    "rounding": "ROUND_DOWN"
+  },
+  "fixture": "qc-boundary-timed",
+  "id": "validate-report__qc-boundary-timed__ROUND-DOWN",
+  "report": "diagnostics-run/freeze/reports/qc-boundary-timed/report.json",
+  "scenario": "validate-report"
+}

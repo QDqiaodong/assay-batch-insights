@@ -1,0 +1,13 @@
+{
+  "calibrations": "diagnostics-run/freeze/fixtures/nonterm-legacy/calibrations.csv",
+  "factor": {
+    "kind": "decimal",
+    "label": "ROUND-UP",
+    "rounding": "ROUND_UP"
+  },
+  "fixture": "nonterm-legacy",
+  "id": "analyze__nonterm-legacy__ROUND-UP",
+  "policy": "diagnostics-run/freeze/fixtures/nonterm-legacy/policy.json",
+  "results": "diagnostics-run/freeze/fixtures/nonterm-legacy/results.csv",
+  "scenario": "analyze"
+}

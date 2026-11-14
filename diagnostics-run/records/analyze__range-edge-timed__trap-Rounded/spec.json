@@ -1,0 +1,15 @@
+{
+  "calibrations": "diagnostics-run/freeze/fixtures/range-edge-timed/calibrations.csv",
+  "factor": {
+    "kind": "decimal",
+    "label": "trap-Rounded",
+    "traps": [
+      "Rounded"
+    ]
+  },
+  "fixture": "range-edge-timed",
+  "id": "analyze__range-edge-timed__trap-Rounded",
+  "policy": "diagnostics-run/freeze/fixtures/range-edge-timed/policy.json",
+  "results": "diagnostics-run/freeze/fixtures/range-edge-timed/results.csv",
+  "scenario": "analyze"
+}

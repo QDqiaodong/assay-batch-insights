@@ -1,0 +1,52 @@
+{
+  "format": "timed",
+  "groups": {
+    "B1/nitrate/Q1": {
+      "decision_note": "inclusive limits applied to the unrounded recovery; display is not used for the decision",
+      "display_would_suggest_passed": true,
+      "full_50dp": {
+        "rsd": "3.928371006591930691115802012",
+        "sd": "0.471404520791031682933896241403232692856557291792316024392226579330244159487369012950129178109213857578337948743637432341"
+      },
+      "kind": "QC",
+      "mean_display_6dp": "12.000000",
+      "mean_exact": "12",
+      "n": 2,
+      "passed_at_default_context": true,
+      "recovery_50dp": "120.0",
+      "recovery_display_6dp": "120.000000",
+      "recovery_display_is_near_half_tie": false,
+      "recovery_exact": "120",
+      "rsd_display_6dp": "3.928371",
+      "rsd_display_is_near_half_tie": false,
+      "rsd_exact_note": "irrational; see sd_squared_exact",
+      "sd_display_6dp": "0.471405",
+      "sd_squared_exact": "2/9",
+      "target_exact": "10"
+    },
+    "B1/nitrate/S1": {
+      "decision_note": "strict > on the unrounded RSD, evaluated exactly; the six-decimal display cannot express a near-tie",
+      "full_50dp": {
+        "rsd": "6.734350297014738327627089163",
+        "sd": "0.707106781186547524400844362104849039284835937688474036588339868995366239231053519425193767163820786367506923115456148512"
+      },
+      "kind": "sample",
+      "max_rsd_pct": "10",
+      "mean_display_6dp": "10.500000",
+      "mean_exact": "21/2",
+      "n": 2,
+      "reasons_at_default_context": [],
+      "rsd_display_6dp": "6.734350",
+      "rsd_display_is_near_half_tie": false,
+      "rsd_exact_note": "irrational; see sd_squared_exact",
+      "sd_display_6dp": "0.707107",
+      "sd_squared_exact": "1/2"
+    }
+  },
+  "intent": "QC replicates 35/3 and 37/3 average exactly 12, so recovery is exactly 120% and the inclusive limit PASSES. Summation rounding at 28 digits can perturb the mean by 1e-27 and flip the decision.",
+  "load": {
+    "accepted_at_default_context": true,
+    "bound": "0 <= concentration <= 1000000000000 mg/L",
+    "concentration_max_exact": "37/3"
+  }
+}

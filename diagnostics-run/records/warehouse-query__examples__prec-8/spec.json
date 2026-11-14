@@ -1,0 +1,12 @@
+{
+  "copy_from": "diagnostics-run/freeze/db/control.sqlite",
+  "db": "diagnostics-run/records/output/query__prec-8/warehouse.sqlite",
+  "factor": {
+    "kind": "decimal",
+    "label": "prec-8",
+    "prec": 8
+  },
+  "fixture": "examples",
+  "id": "warehouse-query__examples__prec-8",
+  "scenario": "warehouse-query"
+}

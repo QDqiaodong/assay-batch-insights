@@ -1,0 +1,14 @@
+{
+  "calibrations": "diagnostics-run/freeze/fixtures/nonterm-legacy/calibrations.csv",
+  "factor": {
+    "kind": "env",
+    "name": "PYTHONHASHSEED",
+    "value": "12345"
+  },
+  "fixture": "nonterm-legacy",
+  "id": "cli__nonterm-legacy__PYTHONHASHSEED-12345",
+  "output": "diagnostics-run/records/output/cli__nonterm-legacy__PYTHONHASHSEED-12345",
+  "policy": "diagnostics-run/freeze/fixtures/nonterm-legacy/policy.json",
+  "results": "diagnostics-run/freeze/fixtures/nonterm-legacy/results.csv",
+  "scenario": "cli"
+}

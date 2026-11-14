@@ -1,0 +1,43 @@
+{
+  "format": "legacy",
+  "groups": {
+    "B1/nitrate/Q1": {
+      "decision_note": "inclusive limits applied to the unrounded recovery; display is not used for the decision",
+      "display_would_suggest_passed": true,
+      "kind": "QC",
+      "mean_display_6dp": "10.000000",
+      "mean_exact": "10",
+      "n": 1,
+      "passed_at_default_context": true,
+      "recovery_50dp": "100",
+      "recovery_display_6dp": "100.000000",
+      "recovery_display_is_near_half_tie": false,
+      "recovery_exact": "100",
+      "target_exact": "10"
+    },
+    "B1/nitrate/S1": {
+      "decision_note": "strict > on the unrounded RSD, evaluated exactly; the six-decimal display cannot express a near-tie",
+      "full_50dp": {
+        "rsd": "9.999999999907404021923571299",
+        "sd": "49999999999.5370201096178564962110173838515709083283925597982553485176301757912092421059368497007693998704244945535934682"
+      },
+      "kind": "sample",
+      "max_rsd_pct": "10",
+      "mean_display_6dp": "500000000000.000000",
+      "mean_exact": "500000000000",
+      "n": 2,
+      "reasons_at_default_context": [],
+      "rsd_display_6dp": "10.000000",
+      "rsd_display_is_near_half_tie": false,
+      "rsd_exact_note": "2499999999953702010962",
+      "sd_display_6dp": "49999999999.537020",
+      "sd_squared_exact": "2499999999953702010962"
+    }
+  },
+  "intent": "Mean is exactly 5e11 and the exact RSD is 9.9999999999...%, strictly below the 10% limit yet indistinguishable from it at six decimals. The decision is a near-tie for the unrounded strict comparison and cannot be recovered from the displayed value.",
+  "load": {
+    "accepted_at_default_context": true,
+    "bound": "0 <= concentration <= 1000000000000 mg/L",
+    "concentration_max_exact": "535355339059"
+  }
+}

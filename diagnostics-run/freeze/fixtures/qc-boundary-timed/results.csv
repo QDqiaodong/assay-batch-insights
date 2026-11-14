@@ -1,0 +1,5 @@
+batch,sample,analyte,replicate,kind,signal,dilution,target_mg_l,measured_at
+B1,S1,nitrate,1,sample,30,1,,2026-03-01T08:00:00Z
+B1,S1,nitrate,2,sample,33,1,,2026-03-01T08:05:00Z
+B1,Q1,nitrate,1,QC,35,1,10,2026-03-01T09:00:00Z
+B1,Q1,nitrate,2,QC,37,1,10,2026-03-01T09:05:00Z

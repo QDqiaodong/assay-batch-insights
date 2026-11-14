@@ -1,0 +1,111 @@
+{
+  "context_actual": {
+    "Emax": 999999,
+    "Emin": -999999,
+    "clamp": 0,
+    "flags": [],
+    "prec": 28,
+    "rounding": "ROUND_HALF_EVEN",
+    "traps": [
+      "DivisionByZero",
+      "InvalidOperation",
+      "Overflow",
+      "Rounded"
+    ]
+  },
+  "context_requested": {
+    "traps": [
+      "Rounded"
+    ]
+  },
+  "environment": {
+    "PYTHONHASHSEED": "0",
+    "TZ": "UTC",
+    "python": "3.11.2"
+  },
+  "factor": {
+    "kind": "decimal",
+    "label": "trap-Rounded",
+    "traps": [
+      "Rounded"
+    ]
+  },
+  "harness_status": "ok",
+  "id": "analyze__nonterm-timed__trap-Rounded",
+  "observed_factor": true,
+  "scenario": "analyze",
+  "spec": {
+    "calibrations": "diagnostics-run/freeze/fixtures/nonterm-timed/calibrations.csv",
+    "factor": {
+      "kind": "decimal",
+      "label": "trap-Rounded",
+      "traps": [
+        "Rounded"
+      ]
+    },
+    "fixture": "nonterm-timed",
+    "id": "analyze__nonterm-timed__trap-Rounded",
+    "policy": "diagnostics-run/freeze/fixtures/nonterm-timed/policy.json",
+    "results": "diagnostics-run/freeze/fixtures/nonterm-timed/results.csv",
+    "scenario": "analyze"
+  },
+  "stages": [
+    {
+      "error": null,
+      "flags": [],
+      "stage": "context",
+      "status": "ok",
+      "values": {
+        "Emax": 999999,
+        "Emin": -999999,
+        "clamp": 0,
+        "flags": [],
+        "prec": 28,
+        "rounding": "ROUND_HALF_EVEN",
+        "traps": [
+          "DivisionByZero",
+          "InvalidOperation",
+          "Overflow",
+          "Rounded"
+        ]
+      }
+    },
+    {
+      "error": {
+        "frames": [
+          {
+            "file": "diagnostics/trial.py",
+            "function": "scenario_analyze",
+            "line": 229
+          },
+          {
+            "file": "assay_insights/input.py",
+            "function": "load",
+            "line": 308
+          },
+          {
+            "file": "assay_insights/input.py",
+            "function": "_load_timed",
+            "line": 262
+          }
+        ],
+        "location": {
+          "file": "assay_insights/input.py",
+          "function": "_load_timed",
+          "line": 262,
+          "source": "concentration = (signal - version[\"intercept\"]) / version[\"slope\"] * dilution"
+        },
+        "message": "[<class 'decimal.Rounded'>]",
+        "type": "decimal.Rounded"
+      },
+      "flags": [
+        "Inexact",
+        "Rounded"
+      ],
+      "stage": "load",
+      "status": "error",
+      "values": {}
+    }
+  ],
+  "trial_dir": "diagnostics-run/records/analyze__nonterm-timed__trap-Rounded"
+}

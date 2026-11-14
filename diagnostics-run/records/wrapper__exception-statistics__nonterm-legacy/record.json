@@ -1,0 +1,157 @@
+{
+  "context_actual": {
+    "Emax": 999999,
+    "Emin": -999999,
+    "clamp": 0,
+    "flags": [],
+    "prec": 28,
+    "rounding": "ROUND_HALF_EVEN",
+    "traps": [
+      "DivisionByZero",
+      "InvalidOperation",
+      "Overflow"
+    ]
+  },
+  "context_requested": {},
+  "environment": {
+    "PYTHONHASHSEED": "0",
+    "TZ": "UTC",
+    "python": "3.11.2"
+  },
+  "factor": {
+    "kind": "decimal",
+    "label": "control"
+  },
+  "harness_status": "ok",
+  "id": "wrapper__exception-statistics__nonterm-legacy",
+  "observed_factor": true,
+  "scenario": "analyze",
+  "spec": {
+    "calibrations": "diagnostics-run/freeze/fixtures/nonterm-legacy/calibrations.csv",
+    "factor": {
+      "kind": "decimal",
+      "label": "control"
+    },
+    "fixture": "nonterm-legacy",
+    "id": "wrapper__exception-statistics__nonterm-legacy",
+    "policy": "diagnostics-run/freeze/fixtures/nonterm-legacy/policy.json",
+    "results": "diagnostics-run/freeze/fixtures/nonterm-legacy/results.csv",
+    "scenario": "analyze",
+    "wrapper": {
+      "kind": "exception",
+      "message": "synthetic controlled failure",
+      "target": "_statistics"
+    },
+    "wrapper_label": "exception-statistics"
+  },
+  "stages": [
+    {
+      "error": null,
+      "flags": [],
+      "stage": "context",
+      "status": "ok",
+      "values": {
+        "Emax": 999999,
+        "Emin": -999999,
+        "clamp": 0,
+        "flags": [],
+        "prec": 28,
+        "rounding": "ROUND_HALF_EVEN",
+        "traps": [
+          "DivisionByZero",
+          "InvalidOperation",
+          "Overflow"
+        ]
+      }
+    },
+    {
+      "error": null,
+      "flags": [
+        "Inexact",
+        "Rounded"
+      ],
+      "stage": "load",
+      "status": "ok",
+      "values": {
+        "measurements": [
+          {
+            "concentration_exact": "3.333333333333333333333333333",
+            "key": "B1/nitrate/S1/1"
+          },
+          {
+            "concentration_exact": "3.666666666666666666666666667",
+            "key": "B1/nitrate/S1/2"
+          },
+          {
+            "concentration_exact": "7",
+            "key": "B1/nitrate/Q1/1"
+          }
+        ]
+      }
+    },
+    {
+      "error": null,
+      "flags": [],
+      "stage": "statistics",
+      "status": "ok",
+      "values": {}
+    },
+    {
+      "error": null,
+      "flags": [],
+      "stage": "qc_recovery",
+      "status": "ok",
+      "values": {}
+    },
+    {
+      "error": {
+        "frames": [
+          {
+            "file": "diagnostics/trial.py",
+            "function": "observe_analysis",
+            "line": 184
+          },
+          {
+            "file": "assay_insights/metrics.py",
+            "function": "analyze",
+            "line": 30
+          },
+          {
+            "file": "assay_insights/metrics.py",
+            "function": "_analyze_legacy",
+            "line": 44
+          },
+          {
+            "file": "diagnostics/trial.py",
+            "function": "recorder",
+            "line": 170
+          },
+          {
+            "file": "diagnostics/trial.py",
+            "function": "boom",
+            "line": 144
+          }
+        ],
+        "location": {
+          "file": "diagnostics/trial.py",
+          "function": "boom",
+          "line": 144,
+          "origin": {
+            "file": "diagnostics/trial.py",
+            "function": "recorder",
+            "line": 170,
+            "source": "n, mean, sd, rsd = original(records)"
+          },
+          "source": "raise RuntimeError(wrapper[\"message\"])"
+        },
+        "message": "synthetic controlled failure",
+        "type": "builtins.RuntimeError"
+      },
+      "flags": [],
+      "stage": "analyze",
+      "status": "error",
+      "values": {}
+    }
+  ],
+  "trial_dir": "diagnostics-run/records/wrapper__exception-statistics__nonterm-legacy"
+}

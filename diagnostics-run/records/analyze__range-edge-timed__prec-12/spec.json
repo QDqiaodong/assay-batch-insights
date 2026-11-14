@@ -1,0 +1,13 @@
+{
+  "calibrations": "diagnostics-run/freeze/fixtures/range-edge-timed/calibrations.csv",
+  "factor": {
+    "kind": "decimal",
+    "label": "prec-12",
+    "prec": 12
+  },
+  "fixture": "range-edge-timed",
+  "id": "analyze__range-edge-timed__prec-12",
+  "policy": "diagnostics-run/freeze/fixtures/range-edge-timed/policy.json",
+  "results": "diagnostics-run/freeze/fixtures/range-edge-timed/results.csv",
+  "scenario": "analyze"
+}

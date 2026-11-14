@@ -1,0 +1,11 @@
+{
+  "copy_from": "diagnostics-run/freeze/db/control.sqlite",
+  "db": "diagnostics-run/records/output/query__control/warehouse.sqlite",
+  "factor": {
+    "kind": "decimal",
+    "label": "control"
+  },
+  "fixture": "examples",
+  "id": "warehouse-query__examples__control",
+  "scenario": "warehouse-query"
+}

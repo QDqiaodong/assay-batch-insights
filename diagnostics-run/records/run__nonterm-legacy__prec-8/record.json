@@ -1,0 +1,130 @@
+{
+  "context_actual": {
+    "Emax": 999999,
+    "Emin": -999999,
+    "clamp": 0,
+    "flags": [],
+    "prec": 8,
+    "rounding": "ROUND_HALF_EVEN",
+    "traps": [
+      "DivisionByZero",
+      "InvalidOperation",
+      "Overflow"
+    ]
+  },
+  "context_requested": {
+    "prec": 8
+  },
+  "environment": {
+    "PYTHONHASHSEED": "0",
+    "TZ": "UTC",
+    "python": "3.11.2"
+  },
+  "factor": {
+    "kind": "decimal",
+    "label": "prec-8",
+    "prec": 8
+  },
+  "harness_status": "ok",
+  "id": "run__nonterm-legacy__prec-8",
+  "observed_factor": true,
+  "scenario": "run",
+  "spec": {
+    "calibrations": "diagnostics-run/freeze/fixtures/nonterm-legacy/calibrations.csv",
+    "factor": {
+      "kind": "decimal",
+      "label": "prec-8",
+      "prec": 8
+    },
+    "fixture": "nonterm-legacy",
+    "id": "run__nonterm-legacy__prec-8",
+    "output": "diagnostics-run/records/output/run__nonterm-legacy__prec-8",
+    "policy": "diagnostics-run/freeze/fixtures/nonterm-legacy/policy.json",
+    "results": "diagnostics-run/freeze/fixtures/nonterm-legacy/results.csv",
+    "scenario": "run"
+  },
+  "stages": [
+    {
+      "error": null,
+      "flags": [],
+      "stage": "context",
+      "status": "ok",
+      "values": {
+        "Emax": 999999,
+        "Emin": -999999,
+        "clamp": 0,
+        "flags": [],
+        "prec": 8,
+        "rounding": "ROUND_HALF_EVEN",
+        "traps": [
+          "DivisionByZero",
+          "InvalidOperation",
+          "Overflow"
+        ]
+      }
+    },
+    {
+      "error": null,
+      "flags": [
+        "Inexact",
+        "Rounded"
+      ],
+      "stage": "run",
+      "status": "ok",
+      "values": {
+        "schema_version": 1,
+        "summary": {
+          "reportable_groups": 1,
+          "sample_groups": 1
+        }
+      }
+    },
+    {
+      "error": null,
+      "flags": [
+        "Inexact",
+        "Rounded"
+      ],
+      "stage": "analyze",
+      "status": "ok",
+      "values": {
+        "quality_controls": {
+          "B1/nitrate/Q1/None": {
+            "passed": true,
+            "recovery": "100.000000"
+          }
+        },
+        "samples": {
+          "B1/nitrate/S1": {
+            "mean": "3.500000",
+            "reasons": [],
+            "reportable": true,
+            "rsd": "6.734352",
+            "sd": "0.235702"
+          }
+        },
+        "summary": {
+          "reportable_groups": 1,
+          "sample_groups": 1
+        }
+      }
+    },
+    {
+      "error": null,
+      "flags": [],
+      "stage": "artifact",
+      "status": "ok",
+      "values": {
+        "report.html": {
+          "bytes": 884,
+          "sha256": "8cc27f74028e89d07c259d31b7234f7037814461a04d0235418f159023377bf5"
+        },
+        "report.json": {
+          "bytes": 1164,
+          "sha256": "f6905c4538c596b24d86aae72e472c380aa1252124d6f080093afb2a3a4536b3"
+        }
+      }
+    }
+  ],
+  "trial_dir": "diagnostics-run/records/run__nonterm-legacy__prec-8"
+}

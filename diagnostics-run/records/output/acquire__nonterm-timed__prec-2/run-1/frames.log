@@ -1,0 +1,5 @@
+@00000098:{"batch":"B1","calibration_sha256":"149dc090ea963b1666285348bd979150fc42b86217ebdfb6a70a1514259d3ecc","count":3,"run_id":"run-1","seq":0,"type":"begin"}*1e7bcfcf
+@000000c0:{"analyte":"nitrate","batch":"B1","dilution":"1","kind":"sample","measured_at":"2026-03-01T08:00:00Z","replicate":"1","sample":"S1","seq":1,"signal":"10","target_mg_l":"","type":"measurement"}*55c3985c
+@000000c0:{"analyte":"nitrate","batch":"B1","dilution":"1","kind":"sample","measured_at":"2026-03-01T08:05:00Z","replicate":"2","sample":"S1","seq":2,"signal":"10","target_mg_l":"","type":"measurement"}*b67fb2fd
+@000000bc:{"analyte":"nitrate","batch":"B1","dilution":"1","kind":"QC","measured_at":"2026-03-01T09:00:00Z","replicate":"1","sample":"Q1","seq":3,"signal":"9","target_mg_l":"3","type":"measurement"}*a88a7335
+@00000079:{"count":3,"measurements_sha256":"4f3e154c8f3844f6e7b5e300026eb1324dca76844756a0b52b8d5a7baad17f7b","seq":4,"type":"end"}*b2f25fb6

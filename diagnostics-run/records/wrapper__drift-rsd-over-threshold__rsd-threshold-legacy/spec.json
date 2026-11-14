@@ -1,0 +1,18 @@
+{
+  "calibrations": "diagnostics-run/freeze/fixtures/rsd-threshold-legacy/calibrations.csv",
+  "factor": {
+    "kind": "decimal",
+    "label": "control"
+  },
+  "fixture": "rsd-threshold-legacy",
+  "id": "wrapper__drift-rsd-over-threshold__rsd-threshold-legacy",
+  "policy": "diagnostics-run/freeze/fixtures/rsd-threshold-legacy/policy.json",
+  "results": "diagnostics-run/freeze/fixtures/rsd-threshold-legacy/results.csv",
+  "scenario": "analyze",
+  "wrapper": {
+    "delta": "0.0001",
+    "kind": "statistics",
+    "target": "_statistics"
+  },
+  "wrapper_label": "drift-rsd-over-threshold"
+}

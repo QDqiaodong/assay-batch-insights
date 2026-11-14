@@ -1,0 +1,11 @@
+{
+  "factor": {
+    "kind": "decimal",
+    "label": "ROUND-DOWN",
+    "rounding": "ROUND_DOWN"
+  },
+  "fixture": "nonterm-timed",
+  "id": "validate-report__nonterm-timed__ROUND-DOWN",
+  "report": "diagnostics-run/freeze/reports/nonterm-timed/report.json",
+  "scenario": "validate-report"
+}

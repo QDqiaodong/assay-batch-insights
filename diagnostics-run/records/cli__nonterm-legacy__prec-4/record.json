@@ -1,0 +1,138 @@
+{
+  "context_actual": {
+    "Emax": 999999,
+    "Emin": -999999,
+    "clamp": 0,
+    "flags": [],
+    "prec": 4,
+    "rounding": "ROUND_HALF_EVEN",
+    "traps": [
+      "DivisionByZero",
+      "InvalidOperation",
+      "Overflow"
+    ]
+  },
+  "context_requested": {
+    "prec": 4
+  },
+  "environment": {
+    "PYTHONHASHSEED": "0",
+    "TZ": "UTC",
+    "python": "3.11.2"
+  },
+  "factor": {
+    "kind": "decimal",
+    "label": "prec-4",
+    "prec": 4
+  },
+  "harness_status": "ok",
+  "id": "cli__nonterm-legacy__prec-4",
+  "observed_factor": true,
+  "scenario": "cli",
+  "spec": {
+    "calibrations": "diagnostics-run/freeze/fixtures/nonterm-legacy/calibrations.csv",
+    "factor": {
+      "kind": "decimal",
+      "label": "prec-4",
+      "prec": 4
+    },
+    "fixture": "nonterm-legacy",
+    "id": "cli__nonterm-legacy__prec-4",
+    "output": "diagnostics-run/records/output/cli__nonterm-legacy__prec-4",
+    "policy": "diagnostics-run/freeze/fixtures/nonterm-legacy/policy.json",
+    "results": "diagnostics-run/freeze/fixtures/nonterm-legacy/results.csv",
+    "scenario": "cli"
+  },
+  "stages": [
+    {
+      "error": null,
+      "flags": [],
+      "stage": "context",
+      "status": "ok",
+      "values": {
+        "Emax": 999999,
+        "Emin": -999999,
+        "clamp": 0,
+        "flags": [],
+        "prec": 4,
+        "rounding": "ROUND_HALF_EVEN",
+        "source": "nested-process sitecustomize",
+        "traps": [
+          "DivisionByZero",
+          "InvalidOperation",
+          "Overflow"
+        ]
+      }
+    },
+    {
+      "error": null,
+      "flags": [],
+      "stage": "cli",
+      "status": "ok",
+      "values": {
+        "command": [
+          "/usr/bin/python3",
+          "-m",
+          "assay_insights",
+          "--calibrations",
+          "diagnostics-run/freeze/fixtures/nonterm-legacy/calibrations.csv",
+          "--results",
+          "diagnostics-run/freeze/fixtures/nonterm-legacy/results.csv",
+          "--policy",
+          "diagnostics-run/freeze/fixtures/nonterm-legacy/policy.json",
+          "--output",
+          "<trial-dir>"
+        ],
+        "exit_code": 0,
+        "product_frame": null,
+        "stderr_last": null,
+        "stderr_tail": [],
+        "stdout": "{\"reportable_groups\": 1, \"sample_groups\": 1}"
+      }
+    },
+    {
+      "error": null,
+      "flags": [],
+      "stage": "report_decision",
+      "status": "ok",
+      "values": {
+        "quality_controls": {
+          "B1/nitrate/Q1/None": {
+            "passed": true,
+            "recovery": "100.000000"
+          }
+        },
+        "samples": {
+          "B1/nitrate/S1": {
+            "mean": "3.500000",
+            "reasons": [],
+            "reportable": true,
+            "rsd": "6.749000",
+            "sd": "0.236200"
+          }
+        },
+        "summary": {
+          "reportable_groups": 1,
+          "sample_groups": 1
+        }
+      }
+    },
+    {
+      "error": null,
+      "flags": [],
+      "stage": "artifact",
+      "status": "ok",
+      "values": {
+        "report.html": {
+          "bytes": 884,
+          "sha256": "08c85e6973b142513024a44a742aff73e34c12bb04f556b5c512ca86aadb8334"
+        },
+        "report.json": {
+          "bytes": 1164,
+          "sha256": "b48246ae1d73c2bc4c53ec5f4b51a184054498e12c8dfc806b25b82523f1242a"
+        }
+      }
+    }
+  ],
+  "trial_dir": "diagnostics-run/records/cli__nonterm-legacy__prec-4"
+}

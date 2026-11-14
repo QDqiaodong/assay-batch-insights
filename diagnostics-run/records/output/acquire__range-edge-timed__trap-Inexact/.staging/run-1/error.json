@@ -1,0 +1,5 @@
+{
+  "code": "validation",
+  "error": "results failed input validation: diagnostics-run/records/output/acquire__range-edge-timed__trap-Inexact/.staging/run-1/results.csv:2: calibrated concentration must be between 0 and 1e12 mg/L",
+  "run_id": "run-1"
+}

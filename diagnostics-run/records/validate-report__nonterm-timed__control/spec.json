@@ -1,0 +1,10 @@
+{
+  "factor": {
+    "kind": "decimal",
+    "label": "control"
+  },
+  "fixture": "nonterm-timed",
+  "id": "validate-report__nonterm-timed__control",
+  "report": "diagnostics-run/freeze/reports/nonterm-timed/report.json",
+  "scenario": "validate-report"
+}

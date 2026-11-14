@@ -1,0 +1,13 @@
+{
+  "calibrations": "diagnostics-run/freeze/fixtures/qc-boundary-legacy/calibrations.csv",
+  "factor": {
+    "kind": "decimal",
+    "label": "prec-12",
+    "prec": 12
+  },
+  "fixture": "qc-boundary-legacy",
+  "id": "analyze__qc-boundary-legacy__prec-12",
+  "policy": "diagnostics-run/freeze/fixtures/qc-boundary-legacy/policy.json",
+  "results": "diagnostics-run/freeze/fixtures/qc-boundary-legacy/results.csv",
+  "scenario": "analyze"
+}

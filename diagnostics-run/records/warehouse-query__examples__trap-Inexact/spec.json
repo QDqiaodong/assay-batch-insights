@@ -1,0 +1,14 @@
+{
+  "copy_from": "diagnostics-run/freeze/db/control.sqlite",
+  "db": "diagnostics-run/records/output/query__trap-Inexact/warehouse.sqlite",
+  "factor": {
+    "kind": "decimal",
+    "label": "trap-Inexact",
+    "traps": [
+      "Inexact"
+    ]
+  },
+  "fixture": "examples",
+  "id": "warehouse-query__examples__trap-Inexact",
+  "scenario": "warehouse-query"
+}

@@ -1,0 +1,13 @@
+{
+  "calibrations": "diagnostics-run/freeze/fixtures/nonterm-legacy/calibrations.csv",
+  "factor": {
+    "kind": "decimal",
+    "label": "prec-2",
+    "prec": 2
+  },
+  "fixture": "nonterm-legacy",
+  "id": "analyze__nonterm-legacy__prec-2",
+  "policy": "diagnostics-run/freeze/fixtures/nonterm-legacy/policy.json",
+  "results": "diagnostics-run/freeze/fixtures/nonterm-legacy/results.csv",
+  "scenario": "analyze"
+}

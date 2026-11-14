@@ -1,0 +1,12 @@
+{
+  "copy_from": "diagnostics-run/freeze/db/control.sqlite",
+  "db": "diagnostics-run/records/output/query__ROUND-UP/warehouse.sqlite",
+  "factor": {
+    "kind": "decimal",
+    "label": "ROUND-UP",
+    "rounding": "ROUND_UP"
+  },
+  "fixture": "examples",
+  "id": "warehouse-query__examples__ROUND-UP",
+  "scenario": "warehouse-query"
+}

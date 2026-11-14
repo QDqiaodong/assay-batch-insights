@@ -1,0 +1,131 @@
+{
+  "context_actual": {
+    "Emax": 999999,
+    "Emin": -999999,
+    "clamp": 0,
+    "flags": [],
+    "prec": 28,
+    "rounding": "ROUND_HALF_EVEN",
+    "traps": [
+      "DivisionByZero",
+      "Inexact",
+      "InvalidOperation",
+      "Overflow"
+    ]
+  },
+  "context_requested": {
+    "traps": [
+      "Inexact"
+    ]
+  },
+  "environment": {
+    "PYTHONHASHSEED": "0",
+    "TZ": "UTC",
+    "python": "3.11.2"
+  },
+  "factor": {
+    "kind": "decimal",
+    "label": "trap-Inexact",
+    "traps": [
+      "Inexact"
+    ]
+  },
+  "harness_status": "ok",
+  "id": "run__qc-boundary-legacy__trap-Inexact",
+  "observed_factor": true,
+  "scenario": "run",
+  "spec": {
+    "calibrations": "diagnostics-run/freeze/fixtures/qc-boundary-legacy/calibrations.csv",
+    "factor": {
+      "kind": "decimal",
+      "label": "trap-Inexact",
+      "traps": [
+        "Inexact"
+      ]
+    },
+    "fixture": "qc-boundary-legacy",
+    "id": "run__qc-boundary-legacy__trap-Inexact",
+    "output": "diagnostics-run/records/output/run__qc-boundary-legacy__trap-Inexact",
+    "policy": "diagnostics-run/freeze/fixtures/qc-boundary-legacy/policy.json",
+    "results": "diagnostics-run/freeze/fixtures/qc-boundary-legacy/results.csv",
+    "scenario": "run"
+  },
+  "stages": [
+    {
+      "error": null,
+      "flags": [],
+      "stage": "context",
+      "status": "ok",
+      "values": {
+        "Emax": 999999,
+        "Emin": -999999,
+        "clamp": 0,
+        "flags": [],
+        "prec": 28,
+        "rounding": "ROUND_HALF_EVEN",
+        "traps": [
+          "DivisionByZero",
+          "Inexact",
+          "InvalidOperation",
+          "Overflow"
+        ]
+      }
+    },
+    {
+      "error": {
+        "frames": [
+          {
+            "file": "diagnostics/trial.py",
+            "function": "scenario_run",
+            "line": 293
+          },
+          {
+            "file": "assay_insights/report.py",
+            "function": "run",
+            "line": 86
+          },
+          {
+            "file": "assay_insights/metrics.py",
+            "function": "analyze",
+            "line": 30
+          },
+          {
+            "file": "assay_insights/metrics.py",
+            "function": "_analyze_legacy",
+            "line": 51
+          },
+          {
+            "file": "assay_insights/metrics.py",
+            "function": "_common",
+            "line": 24
+          },
+          {
+            "file": "assay_insights/metrics.py",
+            "function": "shown",
+            "line": 11
+          }
+        ],
+        "location": {
+          "file": "assay_insights/metrics.py",
+          "function": "shown",
+          "line": 11,
+          "source": "return format(value.quantize(Decimal(\"0.000001\")), \"f\")"
+        },
+        "message": "[<class 'decimal.Inexact'>]",
+        "type": "decimal.Inexact"
+      },
+      "flags": [],
+      "stage": "run",
+      "status": "error",
+      "values": {}
+    },
+    {
+      "error": null,
+      "flags": [],
+      "stage": "artifact",
+      "status": "ok",
+      "values": {}
+    }
+  ],
+  "trial_dir": "diagnostics-run/records/run__qc-boundary-legacy__trap-Inexact"
+}

@@ -1,0 +1,11 @@
+{
+  "factor": {
+    "kind": "decimal",
+    "label": "ROUND-DOWN",
+    "rounding": "ROUND_DOWN"
+  },
+  "fixture": "nonterm-legacy",
+  "id": "validate-report__nonterm-legacy__ROUND-DOWN",
+  "report": "diagnostics-run/freeze/reports/nonterm-legacy/report.json",
+  "scenario": "validate-report"
+}

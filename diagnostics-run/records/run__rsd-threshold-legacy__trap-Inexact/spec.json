@@ -1,0 +1,16 @@
+{
+  "calibrations": "diagnostics-run/freeze/fixtures/rsd-threshold-legacy/calibrations.csv",
+  "factor": {
+    "kind": "decimal",
+    "label": "trap-Inexact",
+    "traps": [
+      "Inexact"
+    ]
+  },
+  "fixture": "rsd-threshold-legacy",
+  "id": "run__rsd-threshold-legacy__trap-Inexact",
+  "output": "diagnostics-run/records/output/run__rsd-threshold-legacy__trap-Inexact",
+  "policy": "diagnostics-run/freeze/fixtures/rsd-threshold-legacy/policy.json",
+  "results": "diagnostics-run/freeze/fixtures/rsd-threshold-legacy/results.csv",
+  "scenario": "run"
+}

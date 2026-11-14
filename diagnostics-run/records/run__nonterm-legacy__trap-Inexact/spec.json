@@ -1,0 +1,16 @@
+{
+  "calibrations": "diagnostics-run/freeze/fixtures/nonterm-legacy/calibrations.csv",
+  "factor": {
+    "kind": "decimal",
+    "label": "trap-Inexact",
+    "traps": [
+      "Inexact"
+    ]
+  },
+  "fixture": "nonterm-legacy",
+  "id": "run__nonterm-legacy__trap-Inexact",
+  "output": "diagnostics-run/records/output/run__nonterm-legacy__trap-Inexact",
+  "policy": "diagnostics-run/freeze/fixtures/nonterm-legacy/policy.json",
+  "results": "diagnostics-run/freeze/fixtures/nonterm-legacy/results.csv",
+  "scenario": "run"
+}

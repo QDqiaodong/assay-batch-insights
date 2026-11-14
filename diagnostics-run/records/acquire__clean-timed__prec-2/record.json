@@ -1,0 +1,156 @@
+{
+  "context_actual": {
+    "Emax": 999999,
+    "Emin": -999999,
+    "clamp": 0,
+    "flags": [],
+    "prec": 2,
+    "rounding": "ROUND_HALF_EVEN",
+    "traps": [
+      "DivisionByZero",
+      "InvalidOperation",
+      "Overflow"
+    ]
+  },
+  "context_requested": {
+    "prec": 2
+  },
+  "environment": {
+    "PYTHONHASHSEED": "0",
+    "TZ": "UTC",
+    "python": "3.11.2"
+  },
+  "factor": {
+    "kind": "decimal",
+    "label": "prec-2",
+    "prec": 2
+  },
+  "harness_status": "ok",
+  "id": "acquire__clean-timed__prec-2",
+  "observed_factor": true,
+  "scenario": "acquire",
+  "spec": {
+    "calibrations": "diagnostics-run/freeze/fixtures/clean-timed/calibrations.csv",
+    "factor": {
+      "kind": "decimal",
+      "label": "prec-2",
+      "prec": 2
+    },
+    "fixture": "clean-timed",
+    "id": "acquire__clean-timed__prec-2",
+    "idle_timeout": 3,
+    "output": "diagnostics-run/records/output/acquire__clean-timed__prec-2",
+    "policy": "diagnostics-run/freeze/fixtures/clean-timed/policy.json",
+    "results": "diagnostics-run/freeze/fixtures/clean-timed/results.csv",
+    "run_id": "run-1",
+    "scenario": "acquire"
+  },
+  "stages": [
+    {
+      "error": null,
+      "flags": [],
+      "stage": "context",
+      "status": "ok",
+      "values": {
+        "Emax": 999999,
+        "Emin": -999999,
+        "clamp": 0,
+        "flags": [],
+        "prec": 2,
+        "rounding": "ROUND_HALF_EVEN",
+        "source": "nested-process sitecustomize",
+        "traps": [
+          "DivisionByZero",
+          "InvalidOperation",
+          "Overflow"
+        ]
+      }
+    },
+    {
+      "error": null,
+      "flags": [],
+      "stage": "process",
+      "status": "ok",
+      "values": {
+        "command": [
+          "/usr/bin/python3",
+          "-m",
+          "assay_insights.acquire",
+          "--device",
+          "/dev/pts/1",
+          "--baud",
+          "115200",
+          "--calibrations",
+          "diagnostics-run/freeze/fixtures/clean-timed/calibrations.csv",
+          "--policy",
+          "diagnostics-run/freeze/fixtures/clean-timed/policy.json",
+          "--output",
+          "<trial-dir>",
+          "--timeout",
+          "3"
+        ],
+        "exit_code": 0,
+        "product_frame": null,
+        "reaped": true,
+        "stderr_last": null,
+        "stderr_tail": [],
+        "stdout": "{\"batch\": \"B1\", \"calibration_sha256\": \"9fa0704871b48b7b80bb1ff906fceacd7085186fbc113e44540f8fe7469f0c9c\", \"count\": 3, \"format\": \"assay-insights.serial-run/1\", \"frames_sha256\": \"89af1e0049df6c0fb47310b94eb9cfcffb1ce384394c04c40591c572a3a8862c\", \"measurements_sha256\": \"48fe3c023253d8676e6655619430840ec9f2e0aac73f8eb58af551848728cee7\", \"policy_sha256\": \"d65da63ba930cb0b8d9ecf2960016dce58b71423b67fa8cdb268ad4b3939e1e0\", \"results_sha256\": \"40b02ca6a3ddc34508b8345cfc5ae231c39d4b6de80288d3bff81d73fd969ed1\", \"run_id\": \"run-1\"}"
+      }
+    },
+    {
+      "error": null,
+      "flags": [],
+      "stage": "instrument",
+      "status": "ok",
+      "values": {
+        "outcome": "acked"
+      }
+    },
+    {
+      "error": null,
+      "flags": [],
+      "stage": "artifact",
+      "status": "ok",
+      "values": {
+        "frames.log": {
+          "bytes": 946,
+          "sha256": "89af1e0049df6c0fb47310b94eb9cfcffb1ce384394c04c40591c572a3a8862c"
+        },
+        "published": true,
+        "results.csv": {
+          "bytes": 223,
+          "sha256": "40b02ca6a3ddc34508b8345cfc5ae231c39d4b6de80288d3bff81d73fd969ed1"
+        },
+        "staging_error_json": null,
+        "staging_exists": false,
+        "summary": {
+          "batch": "B1",
+          "calibration_sha256": "9fa0704871b48b7b80bb1ff906fceacd7085186fbc113e44540f8fe7469f0c9c",
+          "count": 3,
+          "format": "assay-insights.serial-run/1",
+          "frames_sha256": "89af1e0049df6c0fb47310b94eb9cfcffb1ce384394c04c40591c572a3a8862c",
+          "measurements_sha256": "48fe3c023253d8676e6655619430840ec9f2e0aac73f8eb58af551848728cee7",
+          "policy_sha256": "d65da63ba930cb0b8d9ecf2960016dce58b71423b67fa8cdb268ad4b3939e1e0",
+          "results_sha256": "40b02ca6a3ddc34508b8345cfc5ae231c39d4b6de80288d3bff81d73fd969ed1",
+          "run_id": "run-1"
+        },
+        "summary.json": {
+          "bytes": 545,
+          "sha256": "4c5f2fbd6880a322ed786298eb4b000d78169dc2c10b617635963a133aa75fef"
+        }
+      }
+    },
+    {
+      "error": null,
+      "flags": [],
+      "stage": "default_validation",
+      "status": "ok",
+      "values": {
+        "exit_code": 0,
+        "status": "accepted",
+        "stderr_tail": []
+      }
+    }
+  ],
+  "trial_dir": "diagnostics-run/records/acquire__clean-timed__prec-2"
+}

@@ -1,0 +1,112 @@
+{
+  "batches": [
+    {
+      "analyte": "nitrate",
+      "batch": "B1",
+      "qc_groups": 1,
+      "qc_passed": true
+    },
+    {
+      "analyte": "phosphate",
+      "batch": "B1",
+      "qc_groups": 1,
+      "qc_passed": true
+    },
+    {
+      "analyte": "nitrate",
+      "batch": "B2",
+      "qc_groups": 1,
+      "qc_passed": false
+    }
+  ],
+  "inputs_sha256": {
+    "calibrations": "93687bf5a42d92db830b4431cd47fa423401aa36759f7901e9b35a31a1a6bf33",
+    "policy": "1d6bce66ded1601d481d4ff298335cdba603e3a5d61635055c008e967abe402c",
+    "results": "20c77af250358880a7a38e5f8427f5be2dc65adb23f32d28e7fb43295f6daa79"
+  },
+  "policy": {
+    "max_rsd_pct": "10",
+    "min_replicates": 2,
+    "qc_high_pct": "120",
+    "qc_low_pct": "80"
+  },
+  "quality_controls": [
+    {
+      "analyte": "nitrate",
+      "batch": "B1",
+      "mean_mg_l": "10.000000",
+      "n": 1,
+      "passed": true,
+      "recovery_pct": "100.000000",
+      "rsd_pct": null,
+      "sample": "Q1",
+      "sample_sd_mg_l": null
+    },
+    {
+      "analyte": "phosphate",
+      "batch": "B1",
+      "mean_mg_l": "4.000000",
+      "n": 1,
+      "passed": true,
+      "recovery_pct": "100.000000",
+      "rsd_pct": null,
+      "sample": "Q3",
+      "sample_sd_mg_l": null
+    },
+    {
+      "analyte": "nitrate",
+      "batch": "B2",
+      "mean_mg_l": "15.000000",
+      "n": 1,
+      "passed": false,
+      "recovery_pct": "150.000000",
+      "rsd_pct": null,
+      "sample": "Q2",
+      "sample_sd_mg_l": null
+    }
+  ],
+  "samples": [
+    {
+      "analyte": "nitrate",
+      "batch": "B1",
+      "mean_mg_l": "4.600000",
+      "n": 2,
+      "reasons": [],
+      "reportable": true,
+      "rsd_pct": "3.074377",
+      "sample": "S1",
+      "sample_sd_mg_l": "0.141421"
+    },
+    {
+      "analyte": "phosphate",
+      "batch": "B1",
+      "mean_mg_l": "4.000000",
+      "n": 2,
+      "reasons": [],
+      "reportable": true,
+      "rsd_pct": "0.000000",
+      "sample": "S3",
+      "sample_sd_mg_l": "0.000000"
+    },
+    {
+      "analyte": "nitrate",
+      "batch": "B2",
+      "mean_mg_l": "3.000000",
+      "n": 2,
+      "reasons": [
+        "replicate_rsd_exceeded",
+        "batch_qc_failed"
+      ],
+      "reportable": false,
+      "rsd_pct": "47.140452",
+      "sample": "S2",
+      "sample_sd_mg_l": "1.414214"
+    }
+  ],
+  "schema_version": 1,
+  "summary": {
+    "reportable_groups": 2,
+    "sample_groups": 3
+  },
+  "unit": "mg/L"
+}

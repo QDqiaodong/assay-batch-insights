@@ -1,0 +1,15 @@
+{
+  "calibrations": "diagnostics-run/freeze/fixtures/range-edge-timed/calibrations.csv",
+  "factor": {
+    "kind": "decimal",
+    "label": "control"
+  },
+  "fixture": "range-edge-timed",
+  "id": "acquire__range-edge-timed__control",
+  "idle_timeout": 3,
+  "output": "diagnostics-run/records/output/acquire__range-edge-timed__control",
+  "policy": "diagnostics-run/freeze/fixtures/range-edge-timed/policy.json",
+  "results": "diagnostics-run/freeze/fixtures/range-edge-timed/results.csv",
+  "run_id": "run-1",
+  "scenario": "acquire"
+}

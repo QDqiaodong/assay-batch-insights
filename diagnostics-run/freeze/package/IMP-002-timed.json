@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "import_id": "IMP-002",
+  "action": "apply",
+  "reports": [
+    {
+      "path": "reports/2026-03-03-evening/report.json",
+      "label": "evening-timed"
+    }
+  ],
+  "corrections": []
+}

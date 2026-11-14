@@ -1,0 +1,153 @@
+{
+  "context_actual": {
+    "Emax": 999999,
+    "Emin": -999999,
+    "clamp": 0,
+    "flags": [],
+    "prec": 28,
+    "rounding": "ROUND_DOWN",
+    "traps": [
+      "DivisionByZero",
+      "InvalidOperation",
+      "Overflow"
+    ]
+  },
+  "context_requested": {
+    "rounding": "ROUND_DOWN"
+  },
+  "environment": {
+    "PYTHONHASHSEED": "0",
+    "TZ": "UTC",
+    "python": "3.11.2"
+  },
+  "factor": {
+    "kind": "decimal",
+    "label": "ROUND-DOWN",
+    "rounding": "ROUND_DOWN"
+  },
+  "harness_status": "ok",
+  "id": "analyze__qc-boundary-legacy__ROUND-DOWN",
+  "observed_factor": true,
+  "scenario": "analyze",
+  "spec": {
+    "calibrations": "diagnostics-run/freeze/fixtures/qc-boundary-legacy/calibrations.csv",
+    "factor": {
+      "kind": "decimal",
+      "label": "ROUND-DOWN",
+      "rounding": "ROUND_DOWN"
+    },
+    "fixture": "qc-boundary-legacy",
+    "id": "analyze__qc-boundary-legacy__ROUND-DOWN",
+    "policy": "diagnostics-run/freeze/fixtures/qc-boundary-legacy/policy.json",
+    "results": "diagnostics-run/freeze/fixtures/qc-boundary-legacy/results.csv",
+    "scenario": "analyze"
+  },
+  "stages": [
+    {
+      "error": null,
+      "flags": [],
+      "stage": "context",
+      "status": "ok",
+      "values": {
+        "Emax": 999999,
+        "Emin": -999999,
+        "clamp": 0,
+        "flags": [],
+        "prec": 28,
+        "rounding": "ROUND_DOWN",
+        "traps": [
+          "DivisionByZero",
+          "InvalidOperation",
+          "Overflow"
+        ]
+      }
+    },
+    {
+      "error": null,
+      "flags": [],
+      "stage": "load",
+      "status": "ok",
+      "values": {
+        "measurements": [
+          {
+            "concentration_exact": "10",
+            "key": "B1/nitrate/S1/1"
+          },
+          {
+            "concentration_exact": "10",
+            "key": "B1/nitrate/S1/2"
+          },
+          {
+            "concentration_exact": "7.999999999",
+            "key": "B1/nitrate/Q1/1"
+          }
+        ]
+      }
+    },
+    {
+      "error": null,
+      "flags": [],
+      "stage": "statistics",
+      "status": "ok",
+      "values": {
+        "B1/nitrate/Q1/None": {
+          "mean_exact": "7.999999999",
+          "n": 1,
+          "rsd_exact": null,
+          "sd_exact": null
+        },
+        "B1/nitrate/S1/None": {
+          "mean_exact": "10",
+          "n": 2,
+          "rsd_exact": "0",
+          "sd_exact": "0"
+        }
+      }
+    },
+    {
+      "error": null,
+      "flags": [],
+      "stage": "qc_recovery",
+      "status": "ok",
+      "values": {
+        "B1/nitrate/Q1/None": {
+          "limits": [
+            "80",
+            "120"
+          ],
+          "recovery_exact": "79.9999999900"
+        }
+      }
+    },
+    {
+      "error": null,
+      "flags": [],
+      "stage": "analyze",
+      "status": "ok",
+      "values": {
+        "quality_controls": {
+          "B1/nitrate/Q1/None": {
+            "passed": false,
+            "recovery": "79.999999"
+          }
+        },
+        "samples": {
+          "B1/nitrate/S1": {
+            "mean": "10.000000",
+            "reasons": [
+              "batch_qc_failed"
+            ],
+            "reportable": false,
+            "rsd": "0.000000",
+            "sd": "0.000000"
+          }
+        },
+        "summary": {
+          "reportable_groups": 0,
+          "sample_groups": 1
+        }
+      }
+    }
+  ],
+  "trial_dir": "diagnostics-run/records/analyze__qc-boundary-legacy__ROUND-DOWN"
+}

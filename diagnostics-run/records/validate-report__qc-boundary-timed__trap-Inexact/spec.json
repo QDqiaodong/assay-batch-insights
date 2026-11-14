@@ -1,0 +1,13 @@
+{
+  "factor": {
+    "kind": "decimal",
+    "label": "trap-Inexact",
+    "traps": [
+      "Inexact"
+    ]
+  },
+  "fixture": "qc-boundary-timed",
+  "id": "validate-report__qc-boundary-timed__trap-Inexact",
+  "report": "diagnostics-run/freeze/reports/qc-boundary-timed/report.json",
+  "scenario": "validate-report"
+}

@@ -1,0 +1,131 @@
+{
+  "calibrations": [
+    {
+      "analyte": "nitrate",
+      "calibration_id": "C1",
+      "intercept": "0",
+      "slope": "3",
+      "unit": "mg/L",
+      "valid_from": "2026-01-01T00:00:00.000000Z",
+      "valid_to": null
+    }
+  ],
+  "inputs_sha256": {
+    "calibrations": "149dc090ea963b1666285348bd979150fc42b86217ebdfb6a70a1514259d3ecc",
+    "policy": "d65da63ba930cb0b8d9ecf2960016dce58b71423b67fa8cdb268ad4b3939e1e0",
+    "results": "f19804323232d66fa3c0d759498d6680070e351b172b276e6d0b6d5a4201655c"
+  },
+  "measurements": [
+    {
+      "analyte": "nitrate",
+      "batch": "B1",
+      "calibration_id": "C1",
+      "concentration_mg_l": "3.000000",
+      "dilution": "1",
+      "intercept": "0",
+      "kind": "QC",
+      "measured_at": "2026-03-01T09:00:00.000000Z",
+      "replicate": "1",
+      "sample": "Q1",
+      "signal": "9",
+      "slope": "3",
+      "target_mg_l": "3.000000",
+      "valid_from": "2026-01-01T00:00:00.000000Z",
+      "valid_to": null
+    },
+    {
+      "analyte": "nitrate",
+      "batch": "B1",
+      "calibration_id": "C1",
+      "concentration_mg_l": "3.300000",
+      "dilution": "1",
+      "intercept": "0",
+      "kind": "sample",
+      "measured_at": "2026-03-01T08:00:00.000000Z",
+      "replicate": "1",
+      "sample": "S1",
+      "signal": "10",
+      "slope": "3",
+      "valid_from": "2026-01-01T00:00:00.000000Z",
+      "valid_to": null
+    },
+    {
+      "analyte": "nitrate",
+      "batch": "B1",
+      "calibration_id": "C1",
+      "concentration_mg_l": "3.300000",
+      "dilution": "1",
+      "intercept": "0",
+      "kind": "sample",
+      "measured_at": "2026-03-01T08:05:00.000000Z",
+      "replicate": "2",
+      "sample": "S1",
+      "signal": "10",
+      "slope": "3",
+      "valid_from": "2026-01-01T00:00:00.000000Z",
+      "valid_to": null
+    }
+  ],
+  "policy": {
+    "max_rsd_pct": "10",
+    "min_replicates": 2,
+    "qc_high_pct": "120",
+    "qc_low_pct": "80"
+  },
+  "qc_scopes": [
+    {
+      "analyte": "nitrate",
+      "batch": "B1",
+      "calibration_id": "C1",
+      "failing_samples": [],
+      "qc_groups": 1,
+      "qc_passed": true,
+      "status": "passed"
+    }
+  ],
+  "quality_controls": [
+    {
+      "analyte": "nitrate",
+      "batch": "B1",
+      "calibration_id": "C1",
+      "mean_mg_l": "3.000000",
+      "n": 1,
+      "passed": true,
+      "recovery_pct": "100.000000",
+      "rsd_pct": null,
+      "sample": "Q1",
+      "sample_sd_mg_l": null,
+      "target_mg_l": "3.000000"
+    }
+  ],
+  "samples": [
+    {
+      "analyte": "nitrate",
+      "batch": "B1",
+      "calibration_ids": [
+        "C1"
+      ],
+      "mean_mg_l": "3.300000",
+      "n": 2,
+      "qc_checks": [
+        {
+          "calibration_id": "C1",
+          "qc_groups": 1,
+          "qc_passed": true,
+          "status": "passed"
+        }
+      ],
+      "reasons": [],
+      "reportable": true,
+      "rsd_pct": "0.000000",
+      "sample": "S1",
+      "sample_sd_mg_l": "0.000000"
+    }
+  ],
+  "schema_version": 2,
+  "summary": {
+    "reportable_groups": 1,
+    "sample_groups": 1
+  },
+  "unit": "mg/L"
+}

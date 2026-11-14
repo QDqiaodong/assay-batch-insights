@@ -1,0 +1,16 @@
+{
+  "calibrations": "diagnostics-run/freeze/fixtures/clean-timed/calibrations.csv",
+  "factor": {
+    "kind": "decimal",
+    "label": "trap-Inexact",
+    "traps": [
+      "Inexact"
+    ]
+  },
+  "fixture": "clean-timed",
+  "id": "run__clean-timed__trap-Inexact",
+  "output": "diagnostics-run/records/output/run__clean-timed__trap-Inexact",
+  "policy": "diagnostics-run/freeze/fixtures/clean-timed/policy.json",
+  "results": "diagnostics-run/freeze/fixtures/clean-timed/results.csv",
+  "scenario": "run"
+}

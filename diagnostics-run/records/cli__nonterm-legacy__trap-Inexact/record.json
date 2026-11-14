@@ -1,0 +1,120 @@
+{
+  "context_actual": {
+    "Emax": 999999,
+    "Emin": -999999,
+    "clamp": 0,
+    "flags": [],
+    "prec": 28,
+    "rounding": "ROUND_HALF_EVEN",
+    "traps": [
+      "DivisionByZero",
+      "Inexact",
+      "InvalidOperation",
+      "Overflow"
+    ]
+  },
+  "context_requested": {
+    "traps": [
+      "Inexact"
+    ]
+  },
+  "environment": {
+    "PYTHONHASHSEED": "0",
+    "TZ": "UTC",
+    "python": "3.11.2"
+  },
+  "factor": {
+    "kind": "decimal",
+    "label": "trap-Inexact",
+    "traps": [
+      "Inexact"
+    ]
+  },
+  "harness_status": "ok",
+  "id": "cli__nonterm-legacy__trap-Inexact",
+  "observed_factor": true,
+  "scenario": "cli",
+  "spec": {
+    "calibrations": "diagnostics-run/freeze/fixtures/nonterm-legacy/calibrations.csv",
+    "factor": {
+      "kind": "decimal",
+      "label": "trap-Inexact",
+      "traps": [
+        "Inexact"
+      ]
+    },
+    "fixture": "nonterm-legacy",
+    "id": "cli__nonterm-legacy__trap-Inexact",
+    "output": "diagnostics-run/records/output/cli__nonterm-legacy__trap-Inexact",
+    "policy": "diagnostics-run/freeze/fixtures/nonterm-legacy/policy.json",
+    "results": "diagnostics-run/freeze/fixtures/nonterm-legacy/results.csv",
+    "scenario": "cli"
+  },
+  "stages": [
+    {
+      "error": null,
+      "flags": [],
+      "stage": "context",
+      "status": "ok",
+      "values": {
+        "Emax": 999999,
+        "Emin": -999999,
+        "clamp": 0,
+        "flags": [],
+        "prec": 28,
+        "rounding": "ROUND_HALF_EVEN",
+        "source": "nested-process sitecustomize",
+        "traps": [
+          "DivisionByZero",
+          "Inexact",
+          "InvalidOperation",
+          "Overflow"
+        ]
+      }
+    },
+    {
+      "error": null,
+      "flags": [],
+      "stage": "cli",
+      "status": "ok",
+      "values": {
+        "command": [
+          "/usr/bin/python3",
+          "-m",
+          "assay_insights",
+          "--calibrations",
+          "diagnostics-run/freeze/fixtures/nonterm-legacy/calibrations.csv",
+          "--results",
+          "diagnostics-run/freeze/fixtures/nonterm-legacy/results.csv",
+          "--policy",
+          "diagnostics-run/freeze/fixtures/nonterm-legacy/policy.json",
+          "--output",
+          "<trial-dir>"
+        ],
+        "exit_code": 1,
+        "product_frame": {
+          "file": "assay_insights/input.py",
+          "line": 159
+        },
+        "stderr_last": "decimal.Inexact: [<class 'decimal.Inexact'>]",
+        "stderr_tail": [
+          "    return _load_legacy(calibrations_path, results_path, policy_path)",
+          "           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^",
+          "  File \"/workspace/project/assay_insights/input.py\", line 159, in _load_legacy",
+          "    concentration = (signal - intercept) / slope * dilution",
+          "                    ~~~~~~~~~~~~~~~~~~~^~~~~~~~~",
+          "decimal.Inexact: [<class 'decimal.Inexact'>]"
+        ],
+        "stdout": ""
+      }
+    },
+    {
+      "error": null,
+      "flags": [],
+      "stage": "artifact",
+      "status": "ok",
+      "values": {}
+    }
+  ],
+  "trial_dir": "diagnostics-run/records/cli__nonterm-legacy__trap-Inexact"
+}

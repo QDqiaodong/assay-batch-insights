@@ -1,0 +1,13 @@
+{
+  "calibrations": "diagnostics-run/freeze/fixtures/qc-boundary-legacy/calibrations.csv",
+  "factor": {
+    "kind": "decimal",
+    "label": "ROUND-UP",
+    "rounding": "ROUND_UP"
+  },
+  "fixture": "qc-boundary-legacy",
+  "id": "analyze__qc-boundary-legacy__ROUND-UP",
+  "policy": "diagnostics-run/freeze/fixtures/qc-boundary-legacy/policy.json",
+  "results": "diagnostics-run/freeze/fixtures/qc-boundary-legacy/results.csv",
+  "scenario": "analyze"
+}

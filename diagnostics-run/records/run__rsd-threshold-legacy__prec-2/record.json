@@ -1,0 +1,132 @@
+{
+  "context_actual": {
+    "Emax": 999999,
+    "Emin": -999999,
+    "clamp": 0,
+    "flags": [],
+    "prec": 2,
+    "rounding": "ROUND_HALF_EVEN",
+    "traps": [
+      "DivisionByZero",
+      "InvalidOperation",
+      "Overflow"
+    ]
+  },
+  "context_requested": {
+    "prec": 2
+  },
+  "environment": {
+    "PYTHONHASHSEED": "0",
+    "TZ": "UTC",
+    "python": "3.11.2"
+  },
+  "factor": {
+    "kind": "decimal",
+    "label": "prec-2",
+    "prec": 2
+  },
+  "harness_status": "ok",
+  "id": "run__rsd-threshold-legacy__prec-2",
+  "observed_factor": true,
+  "scenario": "run",
+  "spec": {
+    "calibrations": "diagnostics-run/freeze/fixtures/rsd-threshold-legacy/calibrations.csv",
+    "factor": {
+      "kind": "decimal",
+      "label": "prec-2",
+      "prec": 2
+    },
+    "fixture": "rsd-threshold-legacy",
+    "id": "run__rsd-threshold-legacy__prec-2",
+    "output": "diagnostics-run/records/output/run__rsd-threshold-legacy__prec-2",
+    "policy": "diagnostics-run/freeze/fixtures/rsd-threshold-legacy/policy.json",
+    "results": "diagnostics-run/freeze/fixtures/rsd-threshold-legacy/results.csv",
+    "scenario": "run"
+  },
+  "stages": [
+    {
+      "error": null,
+      "flags": [],
+      "stage": "context",
+      "status": "ok",
+      "values": {
+        "Emax": 999999,
+        "Emin": -999999,
+        "clamp": 0,
+        "flags": [],
+        "prec": 2,
+        "rounding": "ROUND_HALF_EVEN",
+        "traps": [
+          "DivisionByZero",
+          "InvalidOperation",
+          "Overflow"
+        ]
+      }
+    },
+    {
+      "error": null,
+      "flags": [
+        "Inexact",
+        "Rounded"
+      ],
+      "stage": "run",
+      "status": "ok",
+      "values": {
+        "schema_version": 1,
+        "summary": {
+          "reportable_groups": 0,
+          "sample_groups": 1
+        }
+      }
+    },
+    {
+      "error": null,
+      "flags": [
+        "Inexact",
+        "Rounded"
+      ],
+      "stage": "analyze",
+      "status": "ok",
+      "values": {
+        "quality_controls": {
+          "B1/nitrate/Q1/None": {
+            "passed": true,
+            "recovery": "100.000000"
+          }
+        },
+        "samples": {
+          "B1/nitrate/S1": {
+            "mean": "500000000000.000000",
+            "reasons": [
+              "replicate_rsd_exceeded"
+            ],
+            "reportable": false,
+            "rsd": "11.000000",
+            "sd": "57000000000.000000"
+          }
+        },
+        "summary": {
+          "reportable_groups": 0,
+          "sample_groups": 1
+        }
+      }
+    },
+    {
+      "error": null,
+      "flags": [],
+      "stage": "artifact",
+      "status": "ok",
+      "values": {
+        "report.html": {
+          "bytes": 919,
+          "sha256": "7e3de30b3e7113a2bf6d1fa13c71e39b5cddaa773b2efbd72bf9015fa1143606"
+        },
+        "report.json": {
+          "bytes": 1228,
+          "sha256": "e1fbe92ce72a621398a3c09b958068b5718bebee47425f723f00245c2e3a05ed"
+        }
+      }
+    }
+  ],
+  "trial_dir": "diagnostics-run/records/run__rsd-threshold-legacy__prec-2"
+}

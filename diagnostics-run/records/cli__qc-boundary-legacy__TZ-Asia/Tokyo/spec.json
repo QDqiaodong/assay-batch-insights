@@ -1,0 +1,14 @@
+{
+  "calibrations": "diagnostics-run/freeze/fixtures/qc-boundary-legacy/calibrations.csv",
+  "factor": {
+    "kind": "env",
+    "name": "TZ",
+    "value": "Asia/Tokyo"
+  },
+  "fixture": "qc-boundary-legacy",
+  "id": "cli__qc-boundary-legacy__TZ-Asia/Tokyo",
+  "output": "diagnostics-run/records/output/cli__qc-boundary-legacy__TZ-Asia-Tokyo",
+  "policy": "diagnostics-run/freeze/fixtures/qc-boundary-legacy/policy.json",
+  "results": "diagnostics-run/freeze/fixtures/qc-boundary-legacy/results.csv",
+  "scenario": "cli"
+}

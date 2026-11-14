@@ -1,0 +1,11 @@
+{
+  "factor": {
+    "kind": "decimal",
+    "label": "prec-2",
+    "prec": 2
+  },
+  "fixture": "nonterm-legacy",
+  "id": "validate-report__nonterm-legacy__prec-2",
+  "report": "diagnostics-run/freeze/reports/nonterm-legacy/report.json",
+  "scenario": "validate-report"
+}

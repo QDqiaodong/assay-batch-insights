@@ -1,0 +1,14 @@
+{
+  "calibrations": "diagnostics-run/freeze/fixtures/qc-boundary-timed/calibrations.csv",
+  "factor": {
+    "kind": "env",
+    "name": "PYTHONHASHSEED",
+    "value": "1"
+  },
+  "fixture": "qc-boundary-timed",
+  "id": "cli__qc-boundary-timed__PYTHONHASHSEED-1",
+  "output": "diagnostics-run/records/output/cli__qc-boundary-timed__PYTHONHASHSEED-1",
+  "policy": "diagnostics-run/freeze/fixtures/qc-boundary-timed/policy.json",
+  "results": "diagnostics-run/freeze/fixtures/qc-boundary-timed/results.csv",
+  "scenario": "cli"
+}

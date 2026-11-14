@@ -1,0 +1,14 @@
+{
+  "calibrations": "diagnostics-run/freeze/fixtures/rsd-threshold-legacy/calibrations.csv",
+  "factor": {
+    "kind": "decimal",
+    "label": "prec-2",
+    "prec": 2
+  },
+  "fixture": "rsd-threshold-legacy",
+  "id": "run__rsd-threshold-legacy__prec-2",
+  "output": "diagnostics-run/records/output/run__rsd-threshold-legacy__prec-2",
+  "policy": "diagnostics-run/freeze/fixtures/rsd-threshold-legacy/policy.json",
+  "results": "diagnostics-run/freeze/fixtures/rsd-threshold-legacy/results.csv",
+  "scenario": "run"
+}

@@ -1,0 +1,13 @@
+{
+  "calibrations": "diagnostics-run/freeze/fixtures/range-edge-timed/calibrations.csv",
+  "factor": {
+    "kind": "decimal",
+    "label": "ROUND-UP",
+    "rounding": "ROUND_UP"
+  },
+  "fixture": "range-edge-timed",
+  "id": "analyze__range-edge-timed__ROUND-UP",
+  "policy": "diagnostics-run/freeze/fixtures/range-edge-timed/policy.json",
+  "results": "diagnostics-run/freeze/fixtures/range-edge-timed/results.csv",
+  "scenario": "analyze"
+}

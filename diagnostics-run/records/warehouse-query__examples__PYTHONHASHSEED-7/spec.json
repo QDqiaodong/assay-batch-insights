@@ -1,0 +1,12 @@
+{
+  "copy_from": "diagnostics-run/freeze/db/control.sqlite",
+  "db": "diagnostics-run/records/output/query__PYTHONHASHSEED-7/warehouse.sqlite",
+  "factor": {
+    "kind": "env",
+    "name": "PYTHONHASHSEED",
+    "value": "7"
+  },
+  "fixture": "examples",
+  "id": "warehouse-query__examples__PYTHONHASHSEED-7",
+  "scenario": "warehouse-query"
+}

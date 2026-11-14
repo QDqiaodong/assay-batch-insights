@@ -1,0 +1,12 @@
+{
+  "copy_from": "diagnostics-run/freeze/db/control.sqlite",
+  "db": "diagnostics-run/records/output/query__TZ-Asia-Tokyo/warehouse.sqlite",
+  "factor": {
+    "kind": "env",
+    "name": "TZ",
+    "value": "Asia/Tokyo"
+  },
+  "fixture": "examples",
+  "id": "warehouse-query__examples__TZ-Asia/Tokyo",
+  "scenario": "warehouse-query"
+}

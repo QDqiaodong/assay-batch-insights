@@ -1,0 +1,112 @@
+{
+  "context_actual": {
+    "Emax": 999999,
+    "Emin": -999999,
+    "clamp": 0,
+    "flags": [],
+    "prec": 8,
+    "rounding": "ROUND_HALF_EVEN",
+    "traps": [
+      "DivisionByZero",
+      "InvalidOperation",
+      "Overflow"
+    ]
+  },
+  "context_requested": {
+    "prec": 8
+  },
+  "environment": {
+    "PYTHONHASHSEED": "0",
+    "TZ": "UTC",
+    "python": "3.11.2"
+  },
+  "factor": {
+    "kind": "decimal",
+    "label": "prec-8",
+    "prec": 8
+  },
+  "harness_status": "ok",
+  "id": "validate-report__qc-boundary-timed__prec-8",
+  "observed_factor": true,
+  "scenario": "validate-report",
+  "spec": {
+    "factor": {
+      "kind": "decimal",
+      "label": "prec-8",
+      "prec": 8
+    },
+    "fixture": "qc-boundary-timed",
+    "id": "validate-report__qc-boundary-timed__prec-8",
+    "report": "diagnostics-run/freeze/reports/qc-boundary-timed/report.json",
+    "scenario": "validate-report"
+  },
+  "stages": [
+    {
+      "error": null,
+      "flags": [],
+      "stage": "context",
+      "status": "ok",
+      "values": {
+        "Emax": 999999,
+        "Emin": -999999,
+        "clamp": 0,
+        "flags": [],
+        "prec": 8,
+        "rounding": "ROUND_HALF_EVEN",
+        "traps": [
+          "DivisionByZero",
+          "InvalidOperation",
+          "Overflow"
+        ]
+      }
+    },
+    {
+      "error": {
+        "frames": [
+          {
+            "file": "diagnostics/trial.py",
+            "function": "scenario_validate_report",
+            "line": 353
+          },
+          {
+            "file": "assay_insights/warehouse/reports.py",
+            "function": "load_report",
+            "line": 112
+          },
+          {
+            "file": "assay_insights/warehouse/reports.py",
+            "function": "_validate_v2",
+            "line": 258
+          },
+          {
+            "file": "assay_insights/warehouse/reports.py",
+            "function": "_fail",
+            "line": 37
+          }
+        ],
+        "location": {
+          "file": "assay_insights/warehouse/reports.py",
+          "function": "_fail",
+          "line": 37,
+          "origin": {
+            "file": "assay_insights/warehouse/reports.py",
+            "function": "_validate_v2",
+            "line": 258,
+            "source": "_fail(f\"report section {field} is inconsistent with its per-measurement facts\")"
+          },
+          "source": "raise ReportValidationError(message)"
+        },
+        "message": "report section quality_controls is inconsistent with its per-measurement facts",
+        "type": "assay_insights.warehouse.errors.ReportValidationError"
+      },
+      "flags": [
+        "Inexact",
+        "Rounded"
+      ],
+      "stage": "validate",
+      "status": "error",
+      "values": {}
+    }
+  ],
+  "trial_dir": "diagnostics-run/records/validate-report__qc-boundary-timed__prec-8"
+}

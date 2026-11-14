@@ -1,0 +1,264 @@
+{
+  "context_actual": {
+    "Emax": 999999,
+    "Emin": -999999,
+    "clamp": 0,
+    "flags": [],
+    "prec": 28,
+    "rounding": "ROUND_HALF_EVEN",
+    "traps": [
+      "DivisionByZero",
+      "InvalidOperation",
+      "Overflow",
+      "Rounded"
+    ]
+  },
+  "context_requested": {
+    "traps": [
+      "Rounded"
+    ]
+  },
+  "environment": {
+    "PYTHONHASHSEED": "0",
+    "TZ": "UTC",
+    "python": "3.11.2"
+  },
+  "factor": {
+    "kind": "decimal",
+    "label": "trap-Rounded",
+    "traps": [
+      "Rounded"
+    ]
+  },
+  "harness_status": "ok",
+  "id": "warehouse-import__examples__trap-Rounded",
+  "observed_factor": true,
+  "scenario": "warehouse-import",
+  "spec": {
+    "db": "diagnostics-run/records/output/import__trap-Rounded/warehouse.sqlite",
+    "factor": {
+      "kind": "decimal",
+      "label": "trap-Rounded",
+      "traps": [
+        "Rounded"
+      ]
+    },
+    "fixture": "examples",
+    "id": "warehouse-import__examples__trap-Rounded",
+    "manifests": [
+      "IMP-001-legacy.json",
+      "IMP-002-timed.json",
+      "IMP-003-rename.json",
+      "IMP-004-rerun.json"
+    ],
+    "package": "diagnostics-run/freeze/package",
+    "scenario": "warehouse-import"
+  },
+  "stages": [
+    {
+      "error": null,
+      "flags": [],
+      "stage": "context",
+      "status": "ok",
+      "values": {
+        "Emax": 999999,
+        "Emin": -999999,
+        "clamp": 0,
+        "flags": [],
+        "prec": 28,
+        "rounding": "ROUND_HALF_EVEN",
+        "traps": [
+          "DivisionByZero",
+          "InvalidOperation",
+          "Overflow",
+          "Rounded"
+        ]
+      }
+    },
+    {
+      "error": null,
+      "flags": [],
+      "stage": "import:IMP-001-legacy.json",
+      "status": "ok",
+      "values": {
+        "created_kind": "fact_transaction",
+        "knowledge_seq": 1,
+        "manifest": "IMP-001-legacy.json",
+        "status": "committed"
+      }
+    },
+    {
+      "error": null,
+      "flags": [
+        "Inexact",
+        "Rounded"
+      ],
+      "stage": "import:IMP-002-timed.json",
+      "status": "ok",
+      "values": {
+        "error": {
+          "frames": [
+            {
+              "file": "diagnostics/trial.py",
+              "function": "scenario_warehouse_import",
+              "line": 377
+            },
+            {
+              "file": "assay_insights/warehouse/importer.py",
+              "function": "import_manifest",
+              "line": 97
+            },
+            {
+              "file": "assay_insights/warehouse/importer.py",
+              "function": "capture_manifest",
+              "line": 44
+            },
+            {
+              "file": "assay_insights/warehouse/reports.py",
+              "function": "load_report",
+              "line": 112
+            },
+            {
+              "file": "assay_insights/warehouse/reports.py",
+              "function": "_validate_v2",
+              "line": 250
+            },
+            {
+              "file": "assay_insights/metrics.py",
+              "function": "analyze",
+              "line": 29
+            },
+            {
+              "file": "assay_insights/metrics.py",
+              "function": "_analyze_timed",
+              "line": 132
+            },
+            {
+              "file": "assay_insights/metrics.py",
+              "function": "_statistics",
+              "line": 18
+            }
+          ],
+          "location": {
+            "file": "assay_insights/metrics.py",
+            "function": "_statistics",
+            "line": 18,
+            "source": "sd = (sum((x-mean)**2 for x in values)/(n-1)).sqrt() if n > 1 else None"
+          },
+          "message": "[<class 'decimal.Rounded'>]",
+          "type": "decimal.Rounded"
+        },
+        "manifest": "IMP-002-timed.json",
+        "status": "error"
+      }
+    },
+    {
+      "error": null,
+      "flags": [
+        "Inexact",
+        "Rounded"
+      ],
+      "stage": "import",
+      "status": "ok",
+      "values": {
+        "outcomes": [
+          {
+            "created_kind": "fact_transaction",
+            "knowledge_seq": 1,
+            "manifest": "IMP-001-legacy.json",
+            "status": "committed"
+          },
+          {
+            "error": {
+              "frames": [
+                {
+                  "file": "diagnostics/trial.py",
+                  "function": "scenario_warehouse_import",
+                  "line": 377
+                },
+                {
+                  "file": "assay_insights/warehouse/importer.py",
+                  "function": "import_manifest",
+                  "line": 97
+                },
+                {
+                  "file": "assay_insights/warehouse/importer.py",
+                  "function": "capture_manifest",
+                  "line": 44
+                },
+                {
+                  "file": "assay_insights/warehouse/reports.py",
+                  "function": "load_report",
+                  "line": 112
+                },
+                {
+                  "file": "assay_insights/warehouse/reports.py",
+                  "function": "_validate_v2",
+                  "line": 250
+                },
+                {
+                  "file": "assay_insights/metrics.py",
+                  "function": "analyze",
+                  "line": 29
+                },
+                {
+                  "file": "assay_insights/metrics.py",
+                  "function": "_analyze_timed",
+                  "line": 132
+                },
+                {
+                  "file": "assay_insights/metrics.py",
+                  "function": "_statistics",
+                  "line": 18
+                }
+              ],
+              "location": {
+                "file": "assay_insights/metrics.py",
+                "function": "_statistics",
+                "line": 18,
+                "source": "sd = (sum((x-mean)**2 for x in values)/(n-1)).sqrt() if n > 1 else None"
+              },
+              "message": "[<class 'decimal.Rounded'>]",
+              "type": "decimal.Rounded"
+            },
+            "manifest": "IMP-002-timed.json",
+            "status": "error"
+          },
+          {
+            "manifest": "IMP-003-rename.json",
+            "status": "not_attempted"
+          },
+          {
+            "manifest": "IMP-004-rerun.json",
+            "status": "not_attempted"
+          }
+        ]
+      }
+    },
+    {
+      "error": null,
+      "flags": [],
+      "stage": "query",
+      "status": "ok",
+      "values": {
+        "knowledge_seq": 1,
+        "latest_knowledge_seq": 1,
+        "query_context": {
+          "Emax": 999999,
+          "Emin": -999999,
+          "clamp": 0,
+          "flags": [],
+          "prec": 28,
+          "rounding": "ROUND_HALF_EVEN",
+          "traps": [
+            "DivisionByZero",
+            "InvalidOperation",
+            "Overflow"
+          ]
+        },
+        "query_sha256": "e281f384ee553fa704da63613eb19db0b22cf8e47dd16195f30a023adcde502d"
+      }
+    }
+  ],
+  "trial_dir": "diagnostics-run/records/warehouse-import__examples__trap-Rounded"
+}

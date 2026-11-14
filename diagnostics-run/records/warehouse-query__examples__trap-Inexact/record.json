@@ -1,0 +1,85 @@
+{
+  "context_actual": {
+    "Emax": 999999,
+    "Emin": -999999,
+    "clamp": 0,
+    "flags": [],
+    "prec": 28,
+    "rounding": "ROUND_HALF_EVEN",
+    "traps": [
+      "DivisionByZero",
+      "Inexact",
+      "InvalidOperation",
+      "Overflow"
+    ]
+  },
+  "context_requested": {
+    "traps": [
+      "Inexact"
+    ]
+  },
+  "environment": {
+    "PYTHONHASHSEED": "0",
+    "TZ": "UTC",
+    "python": "3.11.2"
+  },
+  "factor": {
+    "kind": "decimal",
+    "label": "trap-Inexact",
+    "traps": [
+      "Inexact"
+    ]
+  },
+  "harness_status": "ok",
+  "id": "warehouse-query__examples__trap-Inexact",
+  "observed_factor": true,
+  "scenario": "warehouse-query",
+  "spec": {
+    "copy_from": "diagnostics-run/freeze/db/control.sqlite",
+    "db": "diagnostics-run/records/output/query__trap-Inexact/warehouse.sqlite",
+    "factor": {
+      "kind": "decimal",
+      "label": "trap-Inexact",
+      "traps": [
+        "Inexact"
+      ]
+    },
+    "fixture": "examples",
+    "id": "warehouse-query__examples__trap-Inexact",
+    "scenario": "warehouse-query"
+  },
+  "stages": [
+    {
+      "error": null,
+      "flags": [],
+      "stage": "context",
+      "status": "ok",
+      "values": {
+        "Emax": 999999,
+        "Emin": -999999,
+        "clamp": 0,
+        "flags": [],
+        "prec": 28,
+        "rounding": "ROUND_HALF_EVEN",
+        "traps": [
+          "DivisionByZero",
+          "Inexact",
+          "InvalidOperation",
+          "Overflow"
+        ]
+      }
+    },
+    {
+      "error": null,
+      "flags": [],
+      "stage": "query",
+      "status": "ok",
+      "values": {
+        "knowledge_seq": 4,
+        "latest_knowledge_seq": 4,
+        "query_sha256": "bc60b377156d7c5b8a1ad6db034f35485bed5a16631a513a13faa44fefe2a737"
+      }
+    }
+  ],
+  "trial_dir": "diagnostics-run/records/warehouse-query__examples__trap-Inexact"
+}

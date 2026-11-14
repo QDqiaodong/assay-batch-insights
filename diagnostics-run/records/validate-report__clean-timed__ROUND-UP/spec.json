@@ -1,0 +1,11 @@
+{
+  "factor": {
+    "kind": "decimal",
+    "label": "ROUND-UP",
+    "rounding": "ROUND_UP"
+  },
+  "fixture": "clean-timed",
+  "id": "validate-report__clean-timed__ROUND-UP",
+  "report": "diagnostics-run/freeze/reports/clean-timed/report.json",
+  "scenario": "validate-report"
+}

@@ -1,0 +1,15 @@
+{
+  "calibrations": "diagnostics-run/freeze/fixtures/range-edge-legacy/calibrations.csv",
+  "factor": {
+    "kind": "decimal",
+    "label": "trap-Rounded",
+    "traps": [
+      "Rounded"
+    ]
+  },
+  "fixture": "range-edge-legacy",
+  "id": "analyze__range-edge-legacy__trap-Rounded",
+  "policy": "diagnostics-run/freeze/fixtures/range-edge-legacy/policy.json",
+  "results": "diagnostics-run/freeze/fixtures/range-edge-legacy/results.csv",
+  "scenario": "analyze"
+}

@@ -1,0 +1,12 @@
+{
+  "calibrations": "diagnostics-run/freeze/fixtures/range-edge-legacy/calibrations.csv",
+  "factor": {
+    "kind": "decimal",
+    "label": "control"
+  },
+  "fixture": "range-edge-legacy",
+  "id": "analyze__range-edge-legacy__control",
+  "policy": "diagnostics-run/freeze/fixtures/range-edge-legacy/policy.json",
+  "results": "diagnostics-run/freeze/fixtures/range-edge-legacy/results.csv",
+  "scenario": "analyze"
+}

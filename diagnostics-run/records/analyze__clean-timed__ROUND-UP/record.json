@@ -1,0 +1,151 @@
+{
+  "context_actual": {
+    "Emax": 999999,
+    "Emin": -999999,
+    "clamp": 0,
+    "flags": [],
+    "prec": 28,
+    "rounding": "ROUND_UP",
+    "traps": [
+      "DivisionByZero",
+      "InvalidOperation",
+      "Overflow"
+    ]
+  },
+  "context_requested": {
+    "rounding": "ROUND_UP"
+  },
+  "environment": {
+    "PYTHONHASHSEED": "0",
+    "TZ": "UTC",
+    "python": "3.11.2"
+  },
+  "factor": {
+    "kind": "decimal",
+    "label": "ROUND-UP",
+    "rounding": "ROUND_UP"
+  },
+  "harness_status": "ok",
+  "id": "analyze__clean-timed__ROUND-UP",
+  "observed_factor": true,
+  "scenario": "analyze",
+  "spec": {
+    "calibrations": "diagnostics-run/freeze/fixtures/clean-timed/calibrations.csv",
+    "factor": {
+      "kind": "decimal",
+      "label": "ROUND-UP",
+      "rounding": "ROUND_UP"
+    },
+    "fixture": "clean-timed",
+    "id": "analyze__clean-timed__ROUND-UP",
+    "policy": "diagnostics-run/freeze/fixtures/clean-timed/policy.json",
+    "results": "diagnostics-run/freeze/fixtures/clean-timed/results.csv",
+    "scenario": "analyze"
+  },
+  "stages": [
+    {
+      "error": null,
+      "flags": [],
+      "stage": "context",
+      "status": "ok",
+      "values": {
+        "Emax": 999999,
+        "Emin": -999999,
+        "clamp": 0,
+        "flags": [],
+        "prec": 28,
+        "rounding": "ROUND_UP",
+        "traps": [
+          "DivisionByZero",
+          "InvalidOperation",
+          "Overflow"
+        ]
+      }
+    },
+    {
+      "error": null,
+      "flags": [],
+      "stage": "load",
+      "status": "ok",
+      "values": {
+        "measurements": [
+          {
+            "concentration_exact": "5",
+            "key": "B1/nitrate/S1/1"
+          },
+          {
+            "concentration_exact": "5",
+            "key": "B1/nitrate/S1/2"
+          },
+          {
+            "concentration_exact": "5",
+            "key": "B1/nitrate/Q1/1"
+          }
+        ]
+      }
+    },
+    {
+      "error": null,
+      "flags": [],
+      "stage": "statistics",
+      "status": "ok",
+      "values": {
+        "B1/nitrate/Q1/C1": {
+          "mean_exact": "5",
+          "n": 1,
+          "rsd_exact": null,
+          "sd_exact": null
+        },
+        "B1/nitrate/S1/C1": {
+          "mean_exact": "5",
+          "n": 2,
+          "rsd_exact": "0",
+          "sd_exact": "0"
+        }
+      }
+    },
+    {
+      "error": null,
+      "flags": [],
+      "stage": "qc_recovery",
+      "status": "ok",
+      "values": {
+        "B1/nitrate/Q1/C1": {
+          "limits": [
+            "80",
+            "120"
+          ],
+          "recovery_exact": "100"
+        }
+      }
+    },
+    {
+      "error": null,
+      "flags": [],
+      "stage": "analyze",
+      "status": "ok",
+      "values": {
+        "quality_controls": {
+          "B1/nitrate/Q1/C1": {
+            "passed": true,
+            "recovery": "100.000000"
+          }
+        },
+        "samples": {
+          "B1/nitrate/S1": {
+            "mean": "5.000000",
+            "reasons": [],
+            "reportable": true,
+            "rsd": "0.000000",
+            "sd": "0.000000"
+          }
+        },
+        "summary": {
+          "reportable_groups": 1,
+          "sample_groups": 1
+        }
+      }
+    }
+  ],
+  "trial_dir": "diagnostics-run/records/analyze__clean-timed__ROUND-UP"
+}

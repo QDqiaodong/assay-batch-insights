@@ -1,0 +1,43 @@
+{
+  "format": "timed",
+  "groups": {
+    "B1/nitrate/Q1": {
+      "decision_note": "inclusive limits applied to the unrounded recovery; display is not used for the decision",
+      "display_would_suggest_passed": true,
+      "kind": "QC",
+      "mean_display_6dp": "3.000000",
+      "mean_exact": "3",
+      "n": 1,
+      "passed_at_default_context": true,
+      "recovery_50dp": "100",
+      "recovery_display_6dp": "100.000000",
+      "recovery_display_is_near_half_tie": false,
+      "recovery_exact": "100",
+      "target_exact": "3"
+    },
+    "B1/nitrate/S1": {
+      "decision_note": "strict > on the unrounded RSD, evaluated exactly; the six-decimal display cannot express a near-tie",
+      "full_50dp": {
+        "rsd": "0",
+        "sd": "0"
+      },
+      "kind": "sample",
+      "max_rsd_pct": "10",
+      "mean_display_6dp": "3.333333",
+      "mean_exact": "10/3",
+      "n": 2,
+      "reasons_at_default_context": [],
+      "rsd_display_6dp": "0.000000",
+      "rsd_display_is_near_half_tie": false,
+      "rsd_exact_note": "0",
+      "sd_display_6dp": "0.000000",
+      "sd_squared_exact": "0"
+    }
+  },
+  "intent": "Schema 2 analogue: the report renders the 10/3 concentration as 3.333333. The warehouse compares that claimed six-decimal value to a fresh division with exact equality, so a rounding display is treated as a factual disagreement.",
+  "load": {
+    "accepted_at_default_context": true,
+    "bound": "0 <= concentration <= 1000000000000 mg/L",
+    "concentration_max_exact": "10/3"
+  }
+}

@@ -1,0 +1,111 @@
+{
+  "context_actual": {
+    "Emax": 999999,
+    "Emin": -999999,
+    "clamp": 0,
+    "flags": [],
+    "prec": 28,
+    "rounding": "ROUND_HALF_EVEN",
+    "traps": [
+      "DivisionByZero",
+      "Inexact",
+      "InvalidOperation",
+      "Overflow"
+    ]
+  },
+  "context_requested": {
+    "traps": [
+      "Inexact"
+    ]
+  },
+  "environment": {
+    "PYTHONHASHSEED": "0",
+    "TZ": "UTC",
+    "python": "3.11.2"
+  },
+  "factor": {
+    "kind": "decimal",
+    "label": "trap-Inexact",
+    "traps": [
+      "Inexact"
+    ]
+  },
+  "harness_status": "ok",
+  "id": "analyze__nonterm-legacy__trap-Inexact",
+  "observed_factor": true,
+  "scenario": "analyze",
+  "spec": {
+    "calibrations": "diagnostics-run/freeze/fixtures/nonterm-legacy/calibrations.csv",
+    "factor": {
+      "kind": "decimal",
+      "label": "trap-Inexact",
+      "traps": [
+        "Inexact"
+      ]
+    },
+    "fixture": "nonterm-legacy",
+    "id": "analyze__nonterm-legacy__trap-Inexact",
+    "policy": "diagnostics-run/freeze/fixtures/nonterm-legacy/policy.json",
+    "results": "diagnostics-run/freeze/fixtures/nonterm-legacy/results.csv",
+    "scenario": "analyze"
+  },
+  "stages": [
+    {
+      "error": null,
+      "flags": [],
+      "stage": "context",
+      "status": "ok",
+      "values": {
+        "Emax": 999999,
+        "Emin": -999999,
+        "clamp": 0,
+        "flags": [],
+        "prec": 28,
+        "rounding": "ROUND_HALF_EVEN",
+        "traps": [
+          "DivisionByZero",
+          "Inexact",
+          "InvalidOperation",
+          "Overflow"
+        ]
+      }
+    },
+    {
+      "error": {
+        "frames": [
+          {
+            "file": "diagnostics/trial.py",
+            "function": "scenario_analyze",
+            "line": 229
+          },
+          {
+            "file": "assay_insights/input.py",
+            "function": "load",
+            "line": 307
+          },
+          {
+            "file": "assay_insights/input.py",
+            "function": "_load_legacy",
+            "line": 159
+          }
+        ],
+        "location": {
+          "file": "assay_insights/input.py",
+          "function": "_load_legacy",
+          "line": 159,
+          "source": "concentration = (signal - intercept) / slope * dilution"
+        },
+        "message": "[<class 'decimal.Inexact'>]",
+        "type": "decimal.Inexact"
+      },
+      "flags": [
+        "Inexact",
+        "Rounded"
+      ],
+      "stage": "load",
+      "status": "error",
+      "values": {}
+    }
+  ],
+  "trial_dir": "diagnostics-run/records/analyze__nonterm-legacy__trap-Inexact"
+}

@@ -1,0 +1,77 @@
+{
+  "context_actual": {
+    "Emax": 999999,
+    "Emin": -999999,
+    "clamp": 0,
+    "flags": [],
+    "prec": 28,
+    "rounding": "ROUND_DOWN",
+    "traps": [
+      "DivisionByZero",
+      "InvalidOperation",
+      "Overflow"
+    ]
+  },
+  "context_requested": {
+    "rounding": "ROUND_DOWN"
+  },
+  "environment": {
+    "PYTHONHASHSEED": "0",
+    "TZ": "UTC",
+    "python": "3.11.2"
+  },
+  "factor": {
+    "kind": "decimal",
+    "label": "ROUND-DOWN",
+    "rounding": "ROUND_DOWN"
+  },
+  "harness_status": "ok",
+  "id": "warehouse-query__examples__ROUND-DOWN",
+  "observed_factor": true,
+  "scenario": "warehouse-query",
+  "spec": {
+    "copy_from": "diagnostics-run/freeze/db/control.sqlite",
+    "db": "diagnostics-run/records/output/query__ROUND-DOWN/warehouse.sqlite",
+    "factor": {
+      "kind": "decimal",
+      "label": "ROUND-DOWN",
+      "rounding": "ROUND_DOWN"
+    },
+    "fixture": "examples",
+    "id": "warehouse-query__examples__ROUND-DOWN",
+    "scenario": "warehouse-query"
+  },
+  "stages": [
+    {
+      "error": null,
+      "flags": [],
+      "stage": "context",
+      "status": "ok",
+      "values": {
+        "Emax": 999999,
+        "Emin": -999999,
+        "clamp": 0,
+        "flags": [],
+        "prec": 28,
+        "rounding": "ROUND_DOWN",
+        "traps": [
+          "DivisionByZero",
+          "InvalidOperation",
+          "Overflow"
+        ]
+      }
+    },
+    {
+      "error": null,
+      "flags": [],
+      "stage": "query",
+      "status": "ok",
+      "values": {
+        "knowledge_seq": 4,
+        "latest_knowledge_seq": 4,
+        "query_sha256": "bc60b377156d7c5b8a1ad6db034f35485bed5a16631a513a13faa44fefe2a737"
+      }
+    }
+  ],
+  "trial_dir": "diagnostics-run/records/warehouse-query__examples__ROUND-DOWN"
+}

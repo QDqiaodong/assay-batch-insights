@@ -1,0 +1,43 @@
+{
+  "format": "legacy",
+  "groups": {
+    "B1/nitrate/Q1": {
+      "decision_note": "inclusive limits applied to the unrounded recovery; display is not used for the decision",
+      "display_would_suggest_passed": true,
+      "kind": "QC",
+      "mean_display_6dp": "8.000000",
+      "mean_exact": "7999999999/1000000000",
+      "n": 1,
+      "passed_at_default_context": false,
+      "recovery_50dp": "79.9999999900",
+      "recovery_display_6dp": "80.000000",
+      "recovery_display_is_near_half_tie": false,
+      "recovery_exact": "7999999999/100000000",
+      "target_exact": "10"
+    },
+    "B1/nitrate/S1": {
+      "decision_note": "strict > on the unrounded RSD, evaluated exactly; the six-decimal display cannot express a near-tie",
+      "full_50dp": {
+        "rsd": "0",
+        "sd": "0"
+      },
+      "kind": "sample",
+      "max_rsd_pct": "10",
+      "mean_display_6dp": "10.000000",
+      "mean_exact": "10",
+      "n": 2,
+      "reasons_at_default_context": [],
+      "rsd_display_6dp": "0.000000",
+      "rsd_display_is_near_half_tie": false,
+      "rsd_exact_note": "0",
+      "sd_display_6dp": "0.000000",
+      "sd_squared_exact": "0"
+    }
+  },
+  "intent": "QC recovery is exactly 79.9999999%, one part in 1e7 below the inclusive 80% limit, so the unrounded decision is FAIL while six-decimal display rounds to 80.000000. A consumer re-deriving the decision from displayed values sees an apparent contradiction; this reports an unrounded/display gap, not a wrong decision.",
+  "load": {
+    "accepted_at_default_context": true,
+    "bound": "0 <= concentration <= 1000000000000 mg/L",
+    "concentration_max_exact": "10"
+  }
+}

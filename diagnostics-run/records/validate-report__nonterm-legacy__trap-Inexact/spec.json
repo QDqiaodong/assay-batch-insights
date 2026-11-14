@@ -1,0 +1,13 @@
+{
+  "factor": {
+    "kind": "decimal",
+    "label": "trap-Inexact",
+    "traps": [
+      "Inexact"
+    ]
+  },
+  "fixture": "nonterm-legacy",
+  "id": "validate-report__nonterm-legacy__trap-Inexact",
+  "report": "diagnostics-run/freeze/reports/nonterm-legacy/report.json",
+  "scenario": "validate-report"
+}

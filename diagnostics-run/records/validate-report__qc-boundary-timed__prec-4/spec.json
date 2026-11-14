@@ -1,0 +1,11 @@
+{
+  "factor": {
+    "kind": "decimal",
+    "label": "prec-4",
+    "prec": 4
+  },
+  "fixture": "qc-boundary-timed",
+  "id": "validate-report__qc-boundary-timed__prec-4",
+  "report": "diagnostics-run/freeze/reports/qc-boundary-timed/report.json",
+  "scenario": "validate-report"
+}

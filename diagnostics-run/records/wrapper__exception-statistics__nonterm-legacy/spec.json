@@ -1,0 +1,18 @@
+{
+  "calibrations": "diagnostics-run/freeze/fixtures/nonterm-legacy/calibrations.csv",
+  "factor": {
+    "kind": "decimal",
+    "label": "control"
+  },
+  "fixture": "nonterm-legacy",
+  "id": "wrapper__exception-statistics__nonterm-legacy",
+  "policy": "diagnostics-run/freeze/fixtures/nonterm-legacy/policy.json",
+  "results": "diagnostics-run/freeze/fixtures/nonterm-legacy/results.csv",
+  "scenario": "analyze",
+  "wrapper": {
+    "kind": "exception",
+    "message": "synthetic controlled failure",
+    "target": "_statistics"
+  },
+  "wrapper_label": "exception-statistics"
+}

@@ -1,0 +1,14 @@
+{
+  "calibrations": "diagnostics-run/freeze/fixtures/qc-boundary-timed/calibrations.csv",
+  "factor": {
+    "kind": "decimal",
+    "label": "prec-2",
+    "prec": 2
+  },
+  "fixture": "qc-boundary-timed",
+  "id": "run__qc-boundary-timed__prec-2",
+  "output": "diagnostics-run/records/output/run__qc-boundary-timed__prec-2",
+  "policy": "diagnostics-run/freeze/fixtures/qc-boundary-timed/policy.json",
+  "results": "diagnostics-run/freeze/fixtures/qc-boundary-timed/results.csv",
+  "scenario": "run"
+}

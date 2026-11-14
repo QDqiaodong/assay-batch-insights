@@ -1,0 +1,136 @@
+{
+  "context_actual": {
+    "Emax": 999999,
+    "Emin": -999999,
+    "clamp": 0,
+    "flags": [],
+    "prec": 28,
+    "rounding": "ROUND_HALF_EVEN",
+    "traps": [
+      "DivisionByZero",
+      "InvalidOperation",
+      "Overflow"
+    ]
+  },
+  "context_requested": {},
+  "environment": {
+    "PYTHONHASHSEED": "0",
+    "TZ": "Asia/Tokyo",
+    "python": "3.11.2"
+  },
+  "factor": {
+    "kind": "env",
+    "name": "TZ",
+    "value": "Asia/Tokyo"
+  },
+  "harness_status": "ok",
+  "id": "cli__clean-timed__TZ-Asia/Tokyo",
+  "observed_factor": true,
+  "scenario": "cli",
+  "spec": {
+    "calibrations": "diagnostics-run/freeze/fixtures/clean-timed/calibrations.csv",
+    "factor": {
+      "kind": "env",
+      "name": "TZ",
+      "value": "Asia/Tokyo"
+    },
+    "fixture": "clean-timed",
+    "id": "cli__clean-timed__TZ-Asia/Tokyo",
+    "output": "diagnostics-run/records/output/cli__clean-timed__TZ-Asia-Tokyo",
+    "policy": "diagnostics-run/freeze/fixtures/clean-timed/policy.json",
+    "results": "diagnostics-run/freeze/fixtures/clean-timed/results.csv",
+    "scenario": "cli"
+  },
+  "stages": [
+    {
+      "error": null,
+      "flags": [],
+      "stage": "context",
+      "status": "ok",
+      "values": {
+        "Emax": 999999,
+        "Emin": -999999,
+        "clamp": 0,
+        "flags": [],
+        "prec": 28,
+        "rounding": "ROUND_HALF_EVEN",
+        "source": "interpreter default",
+        "traps": [
+          "DivisionByZero",
+          "InvalidOperation",
+          "Overflow"
+        ]
+      }
+    },
+    {
+      "error": null,
+      "flags": [],
+      "stage": "cli",
+      "status": "ok",
+      "values": {
+        "command": [
+          "/usr/bin/python3",
+          "-m",
+          "assay_insights",
+          "--calibrations",
+          "diagnostics-run/freeze/fixtures/clean-timed/calibrations.csv",
+          "--results",
+          "diagnostics-run/freeze/fixtures/clean-timed/results.csv",
+          "--policy",
+          "diagnostics-run/freeze/fixtures/clean-timed/policy.json",
+          "--output",
+          "<trial-dir>"
+        ],
+        "exit_code": 0,
+        "product_frame": null,
+        "stderr_last": null,
+        "stderr_tail": [],
+        "stdout": "{\"reportable_groups\": 1, \"sample_groups\": 1}"
+      }
+    },
+    {
+      "error": null,
+      "flags": [],
+      "stage": "report_decision",
+      "status": "ok",
+      "values": {
+        "quality_controls": {
+          "B1/nitrate/Q1/C1": {
+            "passed": true,
+            "recovery": "100.000000"
+          }
+        },
+        "samples": {
+          "B1/nitrate/S1": {
+            "mean": "5.000000",
+            "reasons": [],
+            "reportable": true,
+            "rsd": "0.000000",
+            "sd": "0.000000"
+          }
+        },
+        "summary": {
+          "reportable_groups": 1,
+          "sample_groups": 1
+        }
+      }
+    },
+    {
+      "error": null,
+      "flags": [],
+      "stage": "artifact",
+      "status": "ok",
+      "values": {
+        "report.html": {
+          "bytes": 2526,
+          "sha256": "43917f64fedd74e4af42a5fb7bee890a6fe2a2dc8ceb90e67926c845a8a6ce64"
+        },
+        "report.json": {
+          "bytes": 3070,
+          "sha256": "1a087e6d0c7983a3677ccd16e3da26490cdf281fc04d701ade63d5139d984c11"
+        }
+      }
+    }
+  ],
+  "trial_dir": "diagnostics-run/records/cli__clean-timed__TZ-Asia/Tokyo"
+}

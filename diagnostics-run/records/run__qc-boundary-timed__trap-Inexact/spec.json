@@ -1,0 +1,16 @@
+{
+  "calibrations": "diagnostics-run/freeze/fixtures/qc-boundary-timed/calibrations.csv",
+  "factor": {
+    "kind": "decimal",
+    "label": "trap-Inexact",
+    "traps": [
+      "Inexact"
+    ]
+  },
+  "fixture": "qc-boundary-timed",
+  "id": "run__qc-boundary-timed__trap-Inexact",
+  "output": "diagnostics-run/records/output/run__qc-boundary-timed__trap-Inexact",
+  "policy": "diagnostics-run/freeze/fixtures/qc-boundary-timed/policy.json",
+  "results": "diagnostics-run/freeze/fixtures/qc-boundary-timed/results.csv",
+  "scenario": "run"
+}

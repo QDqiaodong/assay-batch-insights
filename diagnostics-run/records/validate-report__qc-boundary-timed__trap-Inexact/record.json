@@ -1,0 +1,114 @@
+{
+  "context_actual": {
+    "Emax": 999999,
+    "Emin": -999999,
+    "clamp": 0,
+    "flags": [],
+    "prec": 28,
+    "rounding": "ROUND_HALF_EVEN",
+    "traps": [
+      "DivisionByZero",
+      "Inexact",
+      "InvalidOperation",
+      "Overflow"
+    ]
+  },
+  "context_requested": {
+    "traps": [
+      "Inexact"
+    ]
+  },
+  "environment": {
+    "PYTHONHASHSEED": "0",
+    "TZ": "UTC",
+    "python": "3.11.2"
+  },
+  "factor": {
+    "kind": "decimal",
+    "label": "trap-Inexact",
+    "traps": [
+      "Inexact"
+    ]
+  },
+  "harness_status": "ok",
+  "id": "validate-report__qc-boundary-timed__trap-Inexact",
+  "observed_factor": true,
+  "scenario": "validate-report",
+  "spec": {
+    "factor": {
+      "kind": "decimal",
+      "label": "trap-Inexact",
+      "traps": [
+        "Inexact"
+      ]
+    },
+    "fixture": "qc-boundary-timed",
+    "id": "validate-report__qc-boundary-timed__trap-Inexact",
+    "report": "diagnostics-run/freeze/reports/qc-boundary-timed/report.json",
+    "scenario": "validate-report"
+  },
+  "stages": [
+    {
+      "error": null,
+      "flags": [],
+      "stage": "context",
+      "status": "ok",
+      "values": {
+        "Emax": 999999,
+        "Emin": -999999,
+        "clamp": 0,
+        "flags": [],
+        "prec": 28,
+        "rounding": "ROUND_HALF_EVEN",
+        "traps": [
+          "DivisionByZero",
+          "Inexact",
+          "InvalidOperation",
+          "Overflow"
+        ]
+      }
+    },
+    {
+      "error": {
+        "frames": [
+          {
+            "file": "diagnostics/trial.py",
+            "function": "scenario_validate_report",
+            "line": 353
+          },
+          {
+            "file": "assay_insights/warehouse/reports.py",
+            "function": "load_report",
+            "line": 112
+          },
+          {
+            "file": "assay_insights/warehouse/reports.py",
+            "function": "_validate_v2",
+            "line": 239
+          },
+          {
+            "file": "assay_insights/warehouse/reports.py",
+            "function": "_check_measurements",
+            "line": 362
+          }
+        ],
+        "location": {
+          "file": "assay_insights/warehouse/reports.py",
+          "function": "_check_measurements",
+          "line": 362,
+          "source": "expected_concentration = (signal - intercept) / slope * dilution"
+        },
+        "message": "[<class 'decimal.Inexact'>]",
+        "type": "decimal.Inexact"
+      },
+      "flags": [
+        "Inexact",
+        "Rounded"
+      ],
+      "stage": "validate",
+      "status": "error",
+      "values": {}
+    }
+  ],
+  "trial_dir": "diagnostics-run/records/validate-report__qc-boundary-timed__trap-Inexact"
+}

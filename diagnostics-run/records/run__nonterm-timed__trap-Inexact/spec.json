@@ -1,0 +1,16 @@
+{
+  "calibrations": "diagnostics-run/freeze/fixtures/nonterm-timed/calibrations.csv",
+  "factor": {
+    "kind": "decimal",
+    "label": "trap-Inexact",
+    "traps": [
+      "Inexact"
+    ]
+  },
+  "fixture": "nonterm-timed",
+  "id": "run__nonterm-timed__trap-Inexact",
+  "output": "diagnostics-run/records/output/run__nonterm-timed__trap-Inexact",
+  "policy": "diagnostics-run/freeze/fixtures/nonterm-timed/policy.json",
+  "results": "diagnostics-run/freeze/fixtures/nonterm-timed/results.csv",
+  "scenario": "run"
+}

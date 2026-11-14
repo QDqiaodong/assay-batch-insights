@@ -1,0 +1,11 @@
+{
+  "factor": {
+    "kind": "decimal",
+    "label": "prec-8",
+    "prec": 8
+  },
+  "fixture": "nonterm-timed",
+  "id": "validate-report__nonterm-timed__prec-8",
+  "report": "diagnostics-run/freeze/reports/nonterm-timed/report.json",
+  "scenario": "validate-report"
+}

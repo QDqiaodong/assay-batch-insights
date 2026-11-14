@@ -1,0 +1,13 @@
+{
+  "factor": {
+    "kind": "decimal",
+    "label": "trap-Inexact",
+    "traps": [
+      "Inexact"
+    ]
+  },
+  "fixture": "clean-timed",
+  "id": "validate-report__clean-timed__trap-Inexact",
+  "report": "diagnostics-run/freeze/reports/clean-timed/report.json",
+  "scenario": "validate-report"
+}

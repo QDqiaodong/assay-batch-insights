@@ -1,0 +1,178 @@
+{
+  "context_actual": {
+    "Emax": 999999,
+    "Emin": -999999,
+    "clamp": 0,
+    "flags": [],
+    "prec": 28,
+    "rounding": "ROUND_HALF_EVEN",
+    "traps": [
+      "DivisionByZero",
+      "InvalidOperation",
+      "Overflow",
+      "Rounded"
+    ]
+  },
+  "context_requested": {
+    "traps": [
+      "Rounded"
+    ]
+  },
+  "environment": {
+    "PYTHONHASHSEED": "0",
+    "TZ": "UTC",
+    "python": "3.11.2"
+  },
+  "factor": {
+    "kind": "decimal",
+    "label": "trap-Rounded",
+    "traps": [
+      "Rounded"
+    ]
+  },
+  "harness_status": "ok",
+  "id": "analyze__rsd-threshold-legacy__trap-Rounded",
+  "observed_factor": true,
+  "scenario": "analyze",
+  "spec": {
+    "calibrations": "diagnostics-run/freeze/fixtures/rsd-threshold-legacy/calibrations.csv",
+    "factor": {
+      "kind": "decimal",
+      "label": "trap-Rounded",
+      "traps": [
+        "Rounded"
+      ]
+    },
+    "fixture": "rsd-threshold-legacy",
+    "id": "analyze__rsd-threshold-legacy__trap-Rounded",
+    "policy": "diagnostics-run/freeze/fixtures/rsd-threshold-legacy/policy.json",
+    "results": "diagnostics-run/freeze/fixtures/rsd-threshold-legacy/results.csv",
+    "scenario": "analyze"
+  },
+  "stages": [
+    {
+      "error": null,
+      "flags": [],
+      "stage": "context",
+      "status": "ok",
+      "values": {
+        "Emax": 999999,
+        "Emin": -999999,
+        "clamp": 0,
+        "flags": [],
+        "prec": 28,
+        "rounding": "ROUND_HALF_EVEN",
+        "traps": [
+          "DivisionByZero",
+          "InvalidOperation",
+          "Overflow",
+          "Rounded"
+        ]
+      }
+    },
+    {
+      "error": null,
+      "flags": [],
+      "stage": "load",
+      "status": "ok",
+      "values": {
+        "measurements": [
+          {
+            "concentration_exact": "535355339059",
+            "key": "B1/nitrate/S1/1"
+          },
+          {
+            "concentration_exact": "464644660941",
+            "key": "B1/nitrate/S1/2"
+          },
+          {
+            "concentration_exact": "10",
+            "key": "B1/nitrate/Q1/1"
+          }
+        ]
+      }
+    },
+    {
+      "error": null,
+      "flags": [
+        "Inexact",
+        "Rounded"
+      ],
+      "stage": "statistics",
+      "status": "ok",
+      "values": {
+        "B1/nitrate/Q1/None": {
+          "mean_exact": "10",
+          "n": 1,
+          "rsd_exact": null,
+          "sd_exact": null
+        }
+      }
+    },
+    {
+      "error": null,
+      "flags": [
+        "Inexact",
+        "Rounded"
+      ],
+      "stage": "qc_recovery",
+      "status": "ok",
+      "values": {
+        "B1/nitrate/Q1/None": {
+          "limits": [
+            "80",
+            "120"
+          ],
+          "recovery_exact": "100"
+        }
+      }
+    },
+    {
+      "error": {
+        "frames": [
+          {
+            "file": "diagnostics/trial.py",
+            "function": "observe_analysis",
+            "line": 184
+          },
+          {
+            "file": "assay_insights/metrics.py",
+            "function": "analyze",
+            "line": 30
+          },
+          {
+            "file": "assay_insights/metrics.py",
+            "function": "_analyze_legacy",
+            "line": 44
+          },
+          {
+            "file": "diagnostics/trial.py",
+            "function": "recorder",
+            "line": 170
+          },
+          {
+            "file": "assay_insights/metrics.py",
+            "function": "_statistics",
+            "line": 18
+          }
+        ],
+        "location": {
+          "file": "assay_insights/metrics.py",
+          "function": "_statistics",
+          "line": 18,
+          "source": "sd = (sum((x-mean)**2 for x in values)/(n-1)).sqrt() if n > 1 else None"
+        },
+        "message": "[<class 'decimal.Rounded'>]",
+        "type": "decimal.Rounded"
+      },
+      "flags": [
+        "Inexact",
+        "Rounded"
+      ],
+      "stage": "analyze",
+      "status": "error",
+      "values": {}
+    }
+  ],
+  "trial_dir": "diagnostics-run/records/analyze__rsd-threshold-legacy__trap-Rounded"
+}

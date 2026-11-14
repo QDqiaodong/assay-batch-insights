@@ -1,0 +1,183 @@
+{
+  "context_actual": {
+    "Emax": 999999,
+    "Emin": -999999,
+    "clamp": 0,
+    "flags": [],
+    "prec": 28,
+    "rounding": "ROUND_HALF_EVEN",
+    "traps": [
+      "DivisionByZero",
+      "InvalidOperation",
+      "Overflow"
+    ]
+  },
+  "context_requested": {},
+  "environment": {
+    "PYTHONHASHSEED": "0",
+    "TZ": "UTC",
+    "python": "3.11.2"
+  },
+  "factor": {
+    "kind": "decimal",
+    "label": "control"
+  },
+  "harness_status": "ok",
+  "id": "warehouse-import__examples__control",
+  "observed_factor": true,
+  "scenario": "warehouse-import",
+  "spec": {
+    "db": "diagnostics-run/records/output/import__control/warehouse.sqlite",
+    "factor": {
+      "kind": "decimal",
+      "label": "control"
+    },
+    "fixture": "examples",
+    "id": "warehouse-import__examples__control",
+    "manifests": [
+      "IMP-001-legacy.json",
+      "IMP-002-timed.json",
+      "IMP-003-rename.json",
+      "IMP-004-rerun.json"
+    ],
+    "package": "diagnostics-run/freeze/package",
+    "scenario": "warehouse-import"
+  },
+  "stages": [
+    {
+      "error": null,
+      "flags": [],
+      "stage": "context",
+      "status": "ok",
+      "values": {
+        "Emax": 999999,
+        "Emin": -999999,
+        "clamp": 0,
+        "flags": [],
+        "prec": 28,
+        "rounding": "ROUND_HALF_EVEN",
+        "traps": [
+          "DivisionByZero",
+          "InvalidOperation",
+          "Overflow"
+        ]
+      }
+    },
+    {
+      "error": null,
+      "flags": [],
+      "stage": "import:IMP-001-legacy.json",
+      "status": "ok",
+      "values": {
+        "created_kind": "fact_transaction",
+        "knowledge_seq": 1,
+        "manifest": "IMP-001-legacy.json",
+        "status": "committed"
+      }
+    },
+    {
+      "error": null,
+      "flags": [
+        "Inexact",
+        "Rounded"
+      ],
+      "stage": "import:IMP-002-timed.json",
+      "status": "ok",
+      "values": {
+        "created_kind": "fact_transaction",
+        "knowledge_seq": 2,
+        "manifest": "IMP-002-timed.json",
+        "status": "committed"
+      }
+    },
+    {
+      "error": null,
+      "flags": [],
+      "stage": "import:IMP-003-rename.json",
+      "status": "ok",
+      "values": {
+        "created_kind": "fact_transaction",
+        "knowledge_seq": 3,
+        "manifest": "IMP-003-rename.json",
+        "status": "committed"
+      }
+    },
+    {
+      "error": null,
+      "flags": [
+        "Inexact",
+        "Rounded"
+      ],
+      "stage": "import:IMP-004-rerun.json",
+      "status": "ok",
+      "values": {
+        "created_kind": "fact_transaction",
+        "knowledge_seq": 4,
+        "manifest": "IMP-004-rerun.json",
+        "status": "committed"
+      }
+    },
+    {
+      "error": null,
+      "flags": [
+        "Inexact",
+        "Rounded"
+      ],
+      "stage": "import",
+      "status": "ok",
+      "values": {
+        "outcomes": [
+          {
+            "created_kind": "fact_transaction",
+            "knowledge_seq": 1,
+            "manifest": "IMP-001-legacy.json",
+            "status": "committed"
+          },
+          {
+            "created_kind": "fact_transaction",
+            "knowledge_seq": 2,
+            "manifest": "IMP-002-timed.json",
+            "status": "committed"
+          },
+          {
+            "created_kind": "fact_transaction",
+            "knowledge_seq": 3,
+            "manifest": "IMP-003-rename.json",
+            "status": "committed"
+          },
+          {
+            "created_kind": "fact_transaction",
+            "knowledge_seq": 4,
+            "manifest": "IMP-004-rerun.json",
+            "status": "committed"
+          }
+        ]
+      }
+    },
+    {
+      "error": null,
+      "flags": [],
+      "stage": "query",
+      "status": "ok",
+      "values": {
+        "knowledge_seq": 4,
+        "latest_knowledge_seq": 4,
+        "query_context": {
+          "Emax": 999999,
+          "Emin": -999999,
+          "clamp": 0,
+          "flags": [],
+          "prec": 28,
+          "rounding": "ROUND_HALF_EVEN",
+          "traps": [
+            "DivisionByZero",
+            "InvalidOperation",
+            "Overflow"
+          ]
+        },
+        "query_sha256": "bc60b377156d7c5b8a1ad6db034f35485bed5a16631a513a13faa44fefe2a737"
+      }
+    }
+  ],
+  "trial_dir": "diagnostics-run/records/warehouse-import__examples__control"
+}

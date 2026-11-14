@@ -1,0 +1,12 @@
+{
+  "calibrations": "diagnostics-run/freeze/fixtures/nonterm-timed/calibrations.csv",
+  "factor": {
+    "kind": "decimal",
+    "label": "control"
+  },
+  "fixture": "nonterm-timed",
+  "id": "analyze__nonterm-timed__control",
+  "policy": "diagnostics-run/freeze/fixtures/nonterm-timed/policy.json",
+  "results": "diagnostics-run/freeze/fixtures/nonterm-timed/results.csv",
+  "scenario": "analyze"
+}
